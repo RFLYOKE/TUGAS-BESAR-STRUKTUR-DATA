@@ -32,7 +32,7 @@ int main(){
         }
         else if (pilihanAnda == 2)
         {
-           cout<<"siuu"<<endl;
+           cout<<"kikoo"<<endl;
         }
         else
         {
