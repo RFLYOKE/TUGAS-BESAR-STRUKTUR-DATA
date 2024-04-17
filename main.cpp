@@ -33,6 +33,7 @@ int main(){
         else if (pilihanAnda == 2)
         {
            cout<<"tampan"<<endl;
+           cout<<"awokawokawok"<<endl;
         }
         else
         {
