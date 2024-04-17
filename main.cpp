@@ -36,6 +36,8 @@ int main(){
            cout<<"awokawokawok"<<endl;
            cout<<"coba cobi"<<endl;
            cout<<"pppppppp"<<endl;
+           cout<<"tesss cobaaaa"<<endl;
+
         }
         else
         {
