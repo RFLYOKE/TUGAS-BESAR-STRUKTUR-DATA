@@ -34,6 +34,10 @@ int main(){
         {
            cout<<"tampan"<<endl;
            cout<<"awokawokawok"<<endl;
+           cout<<"coba cobi"<<endl;
+           cout<<"pppppppp"<<endl;
+           cout<<"tesss cobaaaa"<<endl;
+
         }
         else
         {
