@@ -22,8 +22,7 @@ int main(){
         cout << "====================================" << endl;
         cout << "Silahkan Pilih Siapa Anda [1/2] = ";
         cin >> pilihanAnda;
-        cout << endl
-             << endl;
+        cout << endl << endl;
         cin.ignore();
 
         if (pilihanAnda == 1)
