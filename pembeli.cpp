@@ -2,7 +2,9 @@
 using namespace std;
 
 void loginPembeli(){
-    string username, password;
+    string username, password, usernameLogin, passwordLogin;
+    int maksimal = 0; 
+    bool loginSuccess = false;
 
     // login pembeli
     cout << "=============================================" << endl;
@@ -18,8 +20,6 @@ void loginPembeli(){
     cout << "Akun Anda Berhasil Dibuat..." << endl;
     cout << endl;
     
-    string usernameLogin, passwordLogin;
-    bool loginSuccess = false;
     do {
         cout << "=============================================" << endl;
         cout << "                LOGIN PEMBELI                " << endl;
@@ -35,7 +35,12 @@ void loginPembeli(){
             cout << "Login Berhasil!" << endl;
             loginSuccess = true;
         } else {
+            maksimal++;
             cout << "Username atau Password salah, silahkan coba lagi." << endl;
+            if(maksimal >= 3) {
+                cout << "Anda telah mencoba login sebanyak 3 kali. Silahkan coba lagi nanti." << endl;
+                break;
+            }
         }
-    } while (!loginSuccess);
+    } while (!loginSuccess && maksimal < 3);
 }
