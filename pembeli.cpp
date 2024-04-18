@@ -4,7 +4,7 @@ using namespace std;
 void loginPembeli(){
     string username, password, usernameLogin, passwordLogin;
     int maksimal = 0; 
-    bool loginSuccess = false;
+    bool loginSukses = false;
 
     // login pembeli
     cout << "=============================================" << endl;
@@ -33,7 +33,7 @@ void loginPembeli(){
 
         if(usernameLogin == username && passwordLogin == password) {
             cout << "Login Berhasil!" << endl;
-            loginSuccess = true;
+            loginSukses = true;
         } else {
             maksimal++;
             cout << "Username atau Password salah, silahkan coba lagi." << endl;
@@ -42,5 +42,5 @@ void loginPembeli(){
                 break;
             }
         }
-    } while (!loginSuccess && maksimal < 3);
+    } while (!loginSukses && maksimal < 3);
 }
