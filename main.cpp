@@ -28,7 +28,7 @@ int main(){
 
         if (pilihanAnda == 1)
         {
-            
+            loginPembeli();
         }
         else if (pilihanAnda == 2)
         {
