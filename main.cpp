@@ -28,6 +28,16 @@ int main(){
         if (pilihanAnda == 1)
         {
             loginPembeli();
+        cout << "====================================" << endl;
+        cout << "|           MENU PEMBELI            |" << endl;
+        cout << "| 1.| List Sepatu Tersedia          |" <<endl;
+        cout << "| 2.| Pembelian Sepatu              |" <<endl;
+        cout << "| 3.| Rekapan Pembelian             |" <<endl;
+        cout << "| 4.| Keluar                        |" <<endl;
+        cout << "====================================" << endl;
+        cout<<"Silahkan masukkan pilihan anda: ";    
+        cout<<endl;    
+            
         }
         else if (pilihanAnda == 2)
         {
