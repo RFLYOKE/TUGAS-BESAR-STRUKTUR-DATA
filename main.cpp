@@ -1,8 +1,16 @@
 #include <iostream>
 #include "pembeli.cpp"
 #include "admin.cpp"
+#include "listSepatu.cpp"
 
 using namespace std;
+
+struct Sepatu{
+    string namaSepatu;
+    string tanggalRilis;
+    float ukuran;
+    double harga;
+};
 
 int main(){
     int pilihanAnda;
@@ -17,8 +25,8 @@ int main(){
 
         cout << "====================================" << endl;
         cout << "|       SIAPAKAH DIRI ANDA?        |" << endl;
-        cout << "| 1.| Pembeli                   |" << endl;
-        cout << "| 2.| Admin                    |" << endl;
+        cout << "| 1.| Pembeli                      |" << endl;
+        cout << "| 2.| Admin                        |" << endl;
         cout << "====================================" << endl;
         cout << "Silahkan Pilih Siapa Anda [1/2] = ";
         cin >> pilihanAnda;
@@ -28,6 +36,7 @@ int main(){
         if (pilihanAnda == 1)
         {
             loginPembeli();
+        int pilih;    
         cout << "====================================" << endl;
         cout << "|           MENU PEMBELI            |" << endl;
         cout << "| 1.| List Sepatu Tersedia          |" <<endl;
@@ -36,7 +45,12 @@ int main(){
         cout << "| 4.| Keluar                        |" <<endl;
         cout << "====================================" << endl;
         cout<<"Silahkan masukkan pilihan anda: ";    
+        cin>>pilih;
         cout<<endl;    
+
+        if(pilih==1){
+            listSepatu();
+        }
             
         }
         else if (pilihanAnda == 2)

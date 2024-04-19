@@ -11,7 +11,7 @@ void loginPembeli(){
     cout << "                HELLO FRIENDS!               " << endl;
     cout << "=============================================" << endl;
     cout << endl;
-    cout << "Silahkan Masukkan Username dan Password anda" << endl;
+    cout << "Silahkan Buat Username dan Password anda" << endl;
     cout << "Username* (no spasi): ";
     cin >> username;
     cout << "Password* (no spasi): ";
