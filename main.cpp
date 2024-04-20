@@ -49,7 +49,40 @@ int main(){
         cout<<endl;    
 
         if(pilih==1){
+            int pilihanku;
+            cout << "====================================" << endl;
+            cout << "|             KATEGORI              |" << endl;
+            cout << "| 1.| Sepatu Sepak Bola             |" <<endl;
+            cout << "| 2.| Sepatu Basket                 |" <<endl;
+            cout << "| 3.| Sepatu Running                |" <<endl;
+            cout << "| 4.| Sepatu Sekolah                |" <<endl;
+            cout << "| 5.| Keluar                        |" <<endl;
+            cout << "====================================" << endl;
+            cout<<"Silahkan pilih kategori anda: ";
+            cin>>pilihanku;
+            cout<<endl;
+            switch (pilihanku){
+            case 1:
             listSepatu();
+                break;
+            case 2:
+            listSepatu();
+                break;
+            case 3:
+            listSepatu();
+                break;        
+            case 4:
+            listSepatu();
+                break;
+            case 5:
+            cout<< "-----KELUAR-----\n";
+                break;    
+            default:
+            cout<<"Pilihan yang anda masukkan salah, coba lagi \n";
+                break;
+            }
+        }else if(pilih==2){
+
         }
             
         }
