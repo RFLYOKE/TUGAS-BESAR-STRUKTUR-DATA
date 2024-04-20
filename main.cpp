@@ -4,12 +4,6 @@
 
 using namespace std;
 
-struct Sepatu{
-    string namaSepatu;
-    string tanggalRilis;
-    float ukuran;
-    double harga;
-};
 
 int main(){
     int pilihanAnda;
