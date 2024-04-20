@@ -4,12 +4,14 @@ using namespace std;
 const string username = "admin";
 const string password = "admin123";
 
-void loginAdmin(){
+void loginAdmin()
+{
     string usernameInput, passwordInput;
     bool sukses = false;
     int kesempatan = 0;
 
-    do {
+    do
+    {
         cout << "=============================================" << endl;
         cout << "                   LOGIN ADMIN               " << endl;
         cout << "=============================================" << endl;
@@ -20,13 +22,17 @@ void loginAdmin(){
         cin >> passwordInput;
         cout << endl;
 
-        if(usernameInput == username && passwordInput == password) {
+        if (usernameInput == username && passwordInput == password)
+        {
             cout << "Login Berhasil!" << endl;
             sukses = true;
-        } else {
+        }
+        else
+        {
             kesempatan++;
             cout << "Username atau Password salah, silahkan coba lagi." << endl;
-            if(kesempatan >= 3) {
+            if (kesempatan >= 3)
+            {
                 cout << "Anda telah mencoba login sebanyak 3 kali. Silahkan coba lagi nanti." << endl;
                 break;
             }
