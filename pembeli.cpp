@@ -50,13 +50,13 @@ void pushBarang(string dataMasuk)
     {
         sepatu.tempat++;
         sepatu.data[sepatu.tempat] = dataMasuk;
-        cout << "Berhasil Menambahkan sepatu " << dataMasuk << " ke dalam keranjang" << endl;
+        cout << "Berhasil Menambahkan sepatu [" << dataMasuk << "] ke dalam keranjang" << endl;
     }
     else if (barangBelanjaPenuh() == false)
     {
         sepatu.tempat++;
         sepatu.data[sepatu.tempat] = dataMasuk;
-        cout << "Berhasil Menambahkan sepatu " << dataMasuk << " ke dalam keranjang" << endl;
+        cout << "Berhasil Menambahkan sepatu [" << dataMasuk << "] ke dalam keranjang" << endl;
     }
     else
     {
@@ -85,9 +85,9 @@ void tampilanPembelian()
     }
     else
     {
-        for (int i = 0; i <= sepatu.tempat; i++)
+        for (int i = 1; i <= sepatu.tempat; i++)
         {
-            cout << sepatu.data[i] << endl;
+            cout << i << ".     " << sepatu.data[i] << endl;
         }
     }
 }
@@ -163,7 +163,7 @@ void loginPembeli()
                     switch (pilihanku)
                     {
                     case 1:
-                        int nomer;
+                        int pertama;
                         cout << "================================" << endl;
                         cout << "     DAFTAR SEPATU SEPAK BOLA   " << endl;
                         cout << "================================" << endl;
@@ -179,46 +179,86 @@ void loginPembeli()
                         do
                         {
                             cout << "Pilih Sepatu Anda (1/2/3/4/5/6/7/8): ";
-                            cin >> nomer;
-                            string namaSepatu;
-                            switch (nomer)
+                            cin >> pertama;
+                            string namaSepatu1;
+                            switch (pertama)
                             {
                             case 1:
-                                namaSepatu = "PREDATOR 24 ELITE LEKLESS";
+                                namaSepatu1 = "PREDATOR 24 ELITE LEKLESS";
                                 break;
                             case 2:
-                                namaSepatu = "SAMBA INTER MIAMI CF";
+                                namaSepatu1 = "SAMBA INTER MIAMI CF";
                                 break;
                             case 3:
-                                namaSepatu = "X CRAZYFAST ELITE FIRM";
+                                namaSepatu1 = "X CRAZYFAST ELITE FIRM";
                                 break;
                             case 4:
-                                namaSepatu = "PREDATOR LEAGUE FIRM";
+                                namaSepatu1 = "PREDATOR LEAGUE FIRM";
                                 break;
                             case 5:
-                                namaSepatu = "PREDATOR 24 GROUND BOOTS";
+                                namaSepatu1 = "PREDATOR 24 GROUND BOOTS";
                                 break;
                             case 6:
-                                namaSepatu = "COPA GLORD LEAGUE FIRM";
+                                namaSepatu1 = "COPA GLORD LEAGUE FIRM";
                                 break;
                             case 7:
-                                namaSepatu = "COLekLessPA GLORD 45";
+                                namaSepatu1 = "COLekLessPA GLORD 45";
                                 break;
                             case 8:
-                                namaSepatu = "X CRAZYFAST LEAGUE LEKLESS";
+                                namaSepatu1 = "X CRAZYFAST LEAGUE LEKLESS";
                                 break;
                             default:
-                                namaSepatu = "Pilihan tidak valid";
+                                namaSepatu1 = "Pilihan tidak valid";
                                 break;
                             }
-                            pushBarang(namaSepatu);
+                            pushBarang(namaSepatu1);
                             cout << "Apakah anda ingin memilih lagi? (y/t): ";
                             cin >> yakin;
                         } while (yakin == 'y' || yakin == 'Y');
                         cout << "Silahkan Melakukan Pembayaran" << endl;
                         break;
                     case 2:
-
+                        int kedua;
+                        cout << "================================" << endl;
+                        cout << "       DAFTAR SEPATU BASKET     " << endl;
+                        cout << "================================" << endl;
+                        cout << "| 1.|FORUM LOW SHOES            |" << endl;
+                        cout << "| 2.|SEPATU RIVALRY 86 LOW      |" << endl;
+                        cout << "| 3.|D.O.N. ISSUE 5 TRAINERS    |" << endl;
+                        cout << "| 4.|AE 1 LOW SHOES             |" << endl;
+                        cout << "| 5.|ADIZERO SELECT 2.0 SHOES   |" << endl;
+                        cout << "================================" << endl;
+                        do
+                        {
+                            cout << "Pilih Sepatu Anda (1/2/3/4/5): ";
+                            cin >> kedua;
+                            string namaSepatu2;
+                            switch (kedua)
+                            {
+                            case 1:
+                                namaSepatu2 = "FORUM LOW SHOES";
+                                break;
+                            case 2:
+                                namaSepatu2 = "SEPATU RIVALRY 86 LOW";
+                                break;
+                            case 3:
+                                namaSepatu2 = "D.O.N. ISSUE 5 TRAINERS";
+                                break;
+                            case 4:
+                                namaSepatu2 = "AE 1 LOW SHOES";
+                                break;
+                            case 5:
+                                namaSepatu2 = "ADIZERO SELECT 2.0 SHOES";
+                                break;
+                            default:
+                                namaSepatu2 = "Pilihan tidak valid";
+                                break;
+                            }
+                            pushBarang(namaSepatu2);
+                            cout << "Apakah anda ingin memilih lagi? (y/t): ";
+                            cin >> yakin;
+                        } while (yakin == 'y' || yakin == 'Y');
+                        cout << "Silahkan Melakukan Pembayaran" << endl;
                         break;
                     case 3:
 

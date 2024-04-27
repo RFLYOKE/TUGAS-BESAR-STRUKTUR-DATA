@@ -14,7 +14,7 @@ extern void tampilanPembelian();
 void listSepatu(){
     cout << "Informasi Sepatu Yang Tersedia:\n";
     cout << "-----------------------------------------------------------------------\n";
-    cout << "No.    Nama Sepatu      Tanggal Rilis     Ukuran      Stock      Harga\n";
+    cout << " No.    Nama Sepatu      Tanggal Rilis     Ukuran      Stock      Harga\n";
     cout << "------------------------------------------------------------------------\n";
     tampilanPembelian(); 
     cout << "------------------------------------------------------------------------\n";
