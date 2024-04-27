@@ -11,7 +11,7 @@ string dataMasuk;
 struct barang
 {
     int tempat;
-    Sepatu data[maksimal];
+    string data[maksimal];
 }; barang sepatu;
 
 
@@ -151,7 +151,7 @@ void loginPembeli(){
                     do{
                     cout << "Pilih Sepatu Anda (1/2/3/4/5/6/7/8): ";
                     cin >> pilih;
-                    pushBarang(pilih);
+                    pushBarang(dataMasuk);
                     cout << "Apakah anda ingin memilih lagi? (y/t)";
                     cin >> yakin;
                     } while (yakin == 'y' || yakin == 'Y');
