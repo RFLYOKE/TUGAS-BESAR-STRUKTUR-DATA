@@ -7,9 +7,17 @@ const string password = "admin123";
 const int maximal = 100;
 string inputan;
 
+struct Sepatuu
+{
+    string namaSepatu;
+    string tanggalRilis;
+    float ukuran;
+    int harga;
+};
+
 struct stock{
     int posisi;
-    Sepatu data[maximal];
+    Sepatuu data[maximal];
 }tumpukan;
 
 void inisialisasiAdmin(){
@@ -32,7 +40,7 @@ bool stockPenuh(){
     }
 }
 
-void pushData(Sepatu inputan){
+void pushData(Sepatuu inputan){
     if(stockPenuh()==false){
         tumpukan.posisi++;
         tumpukan.data[tumpukan.posisi]=inputan;
