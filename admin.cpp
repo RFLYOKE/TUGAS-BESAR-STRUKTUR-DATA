@@ -1,8 +1,72 @@
 #include <iostream>
+#include "listSepatu.cpp"
 using namespace std;
 
 const string username = "admin";
 const string password = "admin123";
+const int maximal = 100;
+string inputan;
+
+struct stock{
+    int posisi;
+    Sepatu data[maximal];
+}tumpukan;
+
+void inisialisasiAdmin(){
+    tumpukan.posisi = -1;
+}
+
+bool stockKosong(){
+    if(tumpukan.posisi==-1){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+bool stockPenuh(){
+    if(tumpukan.posisi==maximal-1){
+        return true;
+    }else{
+        return false;
+    }
+}
+
+void pushData(Sepatu inputan){
+    if(stockPenuh()==false){
+        tumpukan.posisi++;
+        tumpukan.data[tumpukan.posisi]=inputan;
+        cout<<"Berhasil Menambahkan Sepatu [ "<<inputan.namaSepatu<<" ] ke dalam daftar stock"<<endl;
+        cout<<"Tanggal Rilis: "<<inputan.tanggalRilis<< ", Ukuran: "<<inputan.ukuran<<", Harga: "<<inputan.harga<<endl;
+    }else if(stockKosong()==true){
+        tumpukan.posisi++;
+        tumpukan.data[tumpukan.posisi]=inputan;
+        cout<<"Berhasil Menambahkan Sepatu [ "<<inputan.namaSepatu<<" ] ke dalam daftar stock"<<endl;
+        cout<<"Tanggal Rilis: "<<inputan.tanggalRilis<< ", Ukuran: "<<inputan.ukuran<<", Harga: "<<inputan.harga<<endl;
+    }else{
+        cout<<"List Sepatu Sudah Penuh"<<endl;
+    }
+}
+
+void popData(){
+    if(stockKosong()==false){
+        tumpukan.posisi--;
+        cout<<"Data stock sepatu berhasil dihapus "<<endl;
+    }else{
+        cout<<"Tidak ada data sepatu "<<endl;
+    }
+}
+
+void tampil(){
+    if(stockKosong()==true){
+        cout<<"Tidak ada data sepatu "<<endl;
+    }else{
+        for(int c=0; c>=tumpukan.posisi; c--){
+            cout<<c<<". "<<tumpukan.data[c].namaSepatu<<" "<<tumpukan.data[c].tanggalRilis<<" "<<tumpukan.data[c].ukuran<<" "<<tumpukan.data[c].harga<<endl;
+
+        }
+    }
+}
 
 void loginAdmin()
 {
@@ -26,6 +90,7 @@ void loginAdmin()
         {
             cout << "Login Berhasil!" << endl;
             sukses = true;
+            
         }
         else
         {
