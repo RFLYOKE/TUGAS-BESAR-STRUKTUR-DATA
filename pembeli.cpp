@@ -148,192 +148,209 @@ void loginPembeli()
                 cin >> pilih;
                 cout << endl;
 
-                if (pilih == 1)
+                switch (pilih)
                 {
+                case 1:
                     int pilihanku;
-                    cout << "====================================" << endl;
-                    cout << "|             KATEGORI              |" << endl;
-                    cout << "| 1.| Sepatu Sepak Bola             |" << endl;
-                    cout << "| 2.| Sepatu Basket                 |" << endl;
-                    cout << "| 3.| Sepatu Running                |" << endl;
-                    cout << "| 4.| Sepatu Sekolah                |" << endl;
-                    cout << "| 0.| Keluar                        |" << endl;
-                    cout << "====================================" << endl;
-                    cout << "Silahkan pilih kategori anda: ";
-                    cin >> pilihanku;
-                    cout << endl;
-                    switch (pilihanku)
+                    do
                     {
-                    case 1:
-                        int pertama;
-                        cout << "================================" << endl;
-                        cout << "     DAFTAR SEPATU SEPAK BOLA   " << endl;
-                        cout << "================================" << endl;
-                        cout << "| 1.| PREDATOR 24 ELITE LEKLESS |" << endl;
-                        cout << "| 2.| SAMBA INTER MIAMI CF      |" << endl;
-                        cout << "| 3.| X CRAZYFAST ELITE FIRM    |" << endl;
-                        cout << "| 4.| PREDATOR LEAGUE FIRM      |" << endl;
-                        cout << "| 5.| PREDATOR 24 GROUND BOOTS  |" << endl;
-                        cout << "| 6.| COPA GLORD LEAGUE FIRM    |" << endl;
-                        cout << "| 7.| COLekLessPA GLORD 45      |" << endl;
-                        cout << "| 8.| X CRAZYFAST LEAGUE LEKLESS|" << endl;
-                        cout << "================================" << endl;
-                        do
-                        {
-                            cout << "Pilih Sepatu Anda (1/2/3/4/5/6/7/8): ";
-                            cin >> pertama;
-                            Sepatu namaSepatu1;
-                            switch (pertama)
-                            {
-                            case 1:
-                                namaSepatu1.namaSepatu = "PREDATOR 24 ELITE LEKLESS";
-                                namaSepatu1.tanggalRilis = "2023-03-15";
-                                namaSepatu1.ukuran = 42;
-                                namaSepatu1.harga = 2500000;
-                                break;
-                            case 2:
-                                namaSepatu1.namaSepatu = "SAMBA INTER MIAMI CF";
-                                namaSepatu1.tanggalRilis = "2024-01-20";
-                                namaSepatu1.ukuran = 43;
-                                namaSepatu1.harga = 1800000;
-                                break;
-                            case 3:
-                                namaSepatu1.namaSepatu = "X CRAZYFAST ELITE FIRM";
-                                namaSepatu1.tanggalRilis = "2022-01-10";
-                                namaSepatu1.ukuran = 44;
-                                namaSepatu1.harga = 2200000;
-                                break;
-                            case 4:
-                                namaSepatu1.namaSepatu = "PREDATOR LEAGUE FIRM";
-                                namaSepatu1.tanggalRilis = "2023-12-23";
-                                namaSepatu1.ukuran = 42.5;
-                                namaSepatu1.harga = 2100000;
-                                break;
-                            case 5:
-                                namaSepatu1.namaSepatu = "PREDATOR 24 GROUND BOOTS";
-                                namaSepatu1.tanggalRilis = "2024-02-11";
-                                namaSepatu1.ukuran = 41;
-                                namaSepatu1.harga = 2300000;
-                                break;
-                            case 6:
-                                namaSepatu1.namaSepatu = "COPA GLORD LEAGUE FIRM";
-                                namaSepatu1.tanggalRilis = "2024-02-19";
-                                namaSepatu1.ukuran = 43.5;
-                                namaSepatu1.harga = 1900000;
-                                break;
-                            case 7:
-                                namaSepatu1.namaSepatu = "COLekLessPA GLORD 45";
-                                namaSepatu1.tanggalRilis = "2022-05-22";
-                                namaSepatu1.ukuran = 40;
-                                namaSepatu1.harga = 2000000;
-                                break;
-                            case 8:
-                                namaSepatu1.namaSepatu = "X CRAZYFAST LEAGUE LEKLESS";
-                                namaSepatu1.tanggalRilis = "2023-07-30";
-                                namaSepatu1.ukuran = 42;
-                                namaSepatu1.harga = 2400000;
-                                break;
-                            default:
-                                namaSepatu1.namaSepatu = "Pilihan tidak valid";
-                                break;
-                            }
-                            pushBarang(namaSepatu1);
-                            cout << "Apakah anda ingin memilih lagi? (y/t): ";
-                            cin >> yakin;
-                        } while (yakin == 'y' || yakin == 'Y');
-                        cout << "Silahkan Melakukan Pembayaran" << endl;
-                        break;
-                    case 2:
-                        int kedua;
-                        cout << "================================" << endl;
-                        cout << "       DAFTAR SEPATU BASKET     " << endl;
-                        cout << "================================" << endl;
-                        cout << "| 1.|FORUM LOW SHOES            |" << endl;
-                        cout << "| 2.|SEPATU RIVALRY 86 LOW      |" << endl;
-                        cout << "| 3.|D.O.N. ISSUE 5 TRAINERS    |" << endl;
-                        cout << "| 4.|AE 1 LOW SHOES             |" << endl;
-                        cout << "| 5.|ADIZERO SELECT 2.0 SHOES   |" << endl;
-                        cout << "================================" << endl;
-                        do
-                        {
-                            cout << "Pilih Sepatu Anda (1/2/3/4/5): ";
-                            cin >> kedua;
-                            Sepatu namaSepatu2;
-                            switch (kedua)
-                            {
-                            case 1:
-                                namaSepatu2.namaSepatu = "FORUM LOW SHOES";
-                                namaSepatu2.tanggalRilis = "2023-11-15";
-                                namaSepatu2.ukuran = 42;
-                                namaSepatu2.harga = 1600000;
-                                break;
-                            case 2:
-                                namaSepatu2.namaSepatu = "SEPATU RIVALRY 86 LOW";
-                                namaSepatu2.tanggalRilis = "2024-03-22";
-                                namaSepatu2.ukuran = 43;
-                                namaSepatu2.harga = 1700000;
-                                break;
-                            case 3:
-                                namaSepatu2.namaSepatu = "D.O.N. ISSUE 5 TRAINERS";
-                                namaSepatu2.tanggalRilis = "2023-01-05";
-                                namaSepatu2.ukuran = 44;
-                                namaSepatu2.harga = 1800000;
-                                break;
-                            case 4:
-                                namaSepatu2.namaSepatu = "AE 1 LOW SHOES";
-                                namaSepatu2.tanggalRilis = "2022-10-10";
-                                namaSepatu2.ukuran = 42.5;
-                                namaSepatu2.harga = 1500000;
-                                break;
-                            case 5:
-                                namaSepatu2.namaSepatu = "ADIZERO SELECT 2.0 SHOES";
-                                namaSepatu2.tanggalRilis = "2023-02-20";
-                                namaSepatu2.ukuran = 41;
-                                namaSepatu2.harga = 1900000;
-                                break;
-                            default:
-                                namaSepatu2.namaSepatu = "Pilihan tidak valid";
-                                break;
-                            }
-                            pushBarang(namaSepatu2);
-                            cout << "Apakah anda ingin memilih lagi? (y/t): ";
-                            cin >> yakin;
-                        } while (yakin == 'y' || yakin == 'Y');
-                        cout << "Silahkan Melakukan Pembayaran" << endl;
-                        break;
-                    case 3:
+                        cout << "====================================" << endl;
+                        cout << "|             KATEGORI              |" << endl;
+                        cout << "| 1.| Sepatu Sepak Bola             |" << endl;
+                        cout << "| 2.| Sepatu Basket                 |" << endl;
+                        cout << "| 3.| Sepatu Running                |" << endl;
+                        cout << "| 4.| Sepatu Sekolah                |" << endl;
+                        cout << "====================================" << endl;
+                        cout << "Silahkan pilih kategori anda: ";
+                        cin >> pilihanku;
+                        cout << endl;
 
-                        break;
-                    case 4:
+                        if (pilihanku == 0)
+                        {
+                            cout << "-----KELUAR-----\n";
+                            break;
+                        }
 
-                        break;
-                    case 0:
-                        cout << "-----KELUAR-----\n";
-                        break;
-                    default:
-                        cout << "Pilihan yang anda masukkan salah, coba lagi \n";
-                        break;
-                    }
-                }
-                else if (pilih == 2)
-                {
+                        switch (pilihanku)
+                        {
+                        case 1:
+                            int pertama;
+                            cout << "================================" << endl;
+                            cout << "     DAFTAR SEPATU SEPAK BOLA   " << endl;
+                            cout << "================================" << endl;
+                            cout << "| 1.| PREDATOR 24 ELITE LEKLESS |" << endl;
+                            cout << "| 2.| SAMBA INTER MIAMI CF      |" << endl;
+                            cout << "| 3.| X CRAZYFAST ELITE FIRM    |" << endl;
+                            cout << "| 4.| PREDATOR LEAGUE FIRM      |" << endl;
+                            cout << "| 5.| PREDATOR 24 GROUND BOOTS  |" << endl;
+                            cout << "| 6.| COPA GLORD LEAGUE FIRM    |" << endl;
+                            cout << "| 7.| COLekLessPA GLORD 45      |" << endl;
+                            cout << "| 8.| X CRAZYFAST LEAGUE LEKLESS|" << endl;
+                            cout << "================================" << endl;
+                            do
+                            {
+                                cout << "Pilih Sepatu Anda (1/2/3/4/5/6/7/8): ";
+                                cin >> pertama;
+                                if (pertama < 1 || pertama > 8)
+                                {
+                                    cout << "Pilihan tidak valid, keluar dari menu sepatu." << endl;
+                                    break;
+                                }
+                                Sepatu namaSepatu1;
+                                switch (pertama)
+                                {
+                                case 1:
+                                    namaSepatu1.namaSepatu = "PREDATOR 24 ELITE LEKLESS";
+                                    namaSepatu1.tanggalRilis = "2023-03-15";
+                                    namaSepatu1.ukuran = 42;
+                                    namaSepatu1.harga = 2500000;
+                                    break;
+                                case 2:
+                                    namaSepatu1.namaSepatu = "SAMBA INTER MIAMI CF";
+                                    namaSepatu1.tanggalRilis = "2024-01-20";
+                                    namaSepatu1.ukuran = 43;
+                                    namaSepatu1.harga = 1800000;
+                                    break;
+                                case 3:
+                                    namaSepatu1.namaSepatu = "X CRAZYFAST ELITE FIRM";
+                                    namaSepatu1.tanggalRilis = "2022-01-10";
+                                    namaSepatu1.ukuran = 44;
+                                    namaSepatu1.harga = 2200000;
+                                    break;
+                                case 4:
+                                    namaSepatu1.namaSepatu = "PREDATOR LEAGUE FIRM";
+                                    namaSepatu1.tanggalRilis = "2023-12-23";
+                                    namaSepatu1.ukuran = 42.5;
+                                    namaSepatu1.harga = 2100000;
+                                    break;
+                                case 5:
+                                    namaSepatu1.namaSepatu = "PREDATOR 24 GROUND BOOTS";
+                                    namaSepatu1.tanggalRilis = "2024-02-11";
+                                    namaSepatu1.ukuran = 41;
+                                    namaSepatu1.harga = 2300000;
+                                    break;
+                                case 6:
+                                    namaSepatu1.namaSepatu = "COPA GLORD LEAGUE FIRM";
+                                    namaSepatu1.tanggalRilis = "2024-02-19";
+                                    namaSepatu1.ukuran = 43.5;
+                                    namaSepatu1.harga = 1900000;
+                                    break;
+                                case 7:
+                                    namaSepatu1.namaSepatu = "COLekLessPA GLORD 45";
+                                    namaSepatu1.tanggalRilis = "2022-05-22";
+                                    namaSepatu1.ukuran = 40;
+                                    namaSepatu1.harga = 2000000;
+                                    break;
+                                case 8:
+                                    namaSepatu1.namaSepatu = "X CRAZYFAST LEAGUE LEKLESS";
+                                    namaSepatu1.tanggalRilis = "2023-07-30";
+                                    namaSepatu1.ukuran = 42;
+                                    namaSepatu1.harga = 2400000;
+                                    break;
+                                default:
+                                    cout << "Pilihan tidak valid" << endl;
+                                    continue;
+                                }
+                                pushBarang(namaSepatu1);
+                                cout << "Apakah anda ingin memilih lagi? (y/t): ";
+                                cin >> yakin;
+                            } while (yakin == 'y' || yakin == 'Y');
+                            cout << "Silahkan Melakukan Pembayaran" << endl;
+                            break;
+                        case 2:
+                            int kedua;
+                            cout << "================================" << endl;
+                            cout << "       DAFTAR SEPATU BASKET     " << endl;
+                            cout << "================================" << endl;
+                            cout << "| 1.|FORUM LOW SHOES            |" << endl;
+                            cout << "| 2.|SEPATU RIVALRY 86 LOW      |" << endl;
+                            cout << "| 3.|D.O.N. ISSUE 5 TRAINERS    |" << endl;
+                            cout << "| 4.|AE 1 LOW SHOES             |" << endl;
+                            cout << "| 5.|ADIZERO SELECT 2.0 SHOES   |" << endl;
+                            cout << "================================" << endl;
+                            do
+                            {
+                                cout << "Pilih Sepatu Anda (1/2/3/4/5): ";
+                                cin >> kedua;
+                                if (kedua < 1 || kedua > 5)
+                                {
+                                    cout << "Pilihan tidak valid, keluar dari menu sepatu." << endl;
+                                    break;
+                                }
+                                Sepatu namaSepatu2;
+                                switch (kedua)
+                                {
+                                case 1:
+                                    namaSepatu2.namaSepatu = "FORUM LOW SHOES";
+                                    namaSepatu2.tanggalRilis = "2023-11-15";
+                                    namaSepatu2.ukuran = 42;
+                                    namaSepatu2.harga = 1600000;
+                                    break;
+                                case 2:
+                                    namaSepatu2.namaSepatu = "SEPATU RIVALRY 86 LOW";
+                                    namaSepatu2.tanggalRilis = "2024-03-22";
+                                    namaSepatu2.ukuran = 43;
+                                    namaSepatu2.harga = 1700000;
+                                    break;
+                                case 3:
+                                    namaSepatu2.namaSepatu = "D.O.N. ISSUE 5 TRAINERS";
+                                    namaSepatu2.tanggalRilis = "2023-01-05";
+                                    namaSepatu2.ukuran = 44;
+                                    namaSepatu2.harga = 1800000;
+                                    break;
+                                case 4:
+                                    namaSepatu2.namaSepatu = "AE 1 LOW SHOES";
+                                    namaSepatu2.tanggalRilis = "2022-10-10";
+                                    namaSepatu2.ukuran = 42.5;
+                                    namaSepatu2.harga = 1500000;
+                                    break;
+                                case 5:
+                                    namaSepatu2.namaSepatu = "ADIZERO SELECT 2.0 SHOES";
+                                    namaSepatu2.tanggalRilis = "2023-02-20";
+                                    namaSepatu2.ukuran = 41;
+                                    namaSepatu2.harga = 1900000;
+                                    break;
+                                default:
+                                    cout << "Pilihan tidak valid" << endl;
+                                    continue;
+                                }
+                                pushBarang(namaSepatu2);
+                                cout << "Apakah anda ingin memilih lagi? (y/t): ";
+                                cin >> yakin;
+                            } while (yakin == 'y' || yakin == 'Y');
+                            cout << "Silahkan Melakukan Pembayaran" << endl;
+                            break;
+                        case 3:
+
+                            break;
+                        case 4:
+
+                            break;
+                        default:
+                            cout << "Pilihan yang anda masukkan salah, coba lagi \n";
+                            break;
+                        }
+                    } while (pilihanku == 'y' || pilihanku == 'Y');
+                    break;
+                case 2:
                     popBarang();
-                }
-                else if (pilih == 3)
-                {
+                    break;
+                case 3:
                     listSepatu();
-                }
-                else if (pilih == 4)
-                {
+                    break;
+                case 4:
                     cout << "=========================" << endl;
                     cout << "     Menu Pembayaran     " << endl;
                     cout << "=========================" << endl;
+                    break;
+                case 0:
+                    cout << "Terima Kasih Sudah Datang" << endl;
+                    break;
+                default:
+                    cout << "Pilihan tidak valid, silahkan coba lagi." << endl;
+                    break;
                 }
-                else
-                {
-                    cout << " Terima Kasih Sudah Datang " << endl;
-                }
-            } while (keluar == true);
+            } while (pilih != 0);
         }
         else
         {
