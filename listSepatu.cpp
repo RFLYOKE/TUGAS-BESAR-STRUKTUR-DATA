@@ -6,7 +6,7 @@ struct Sepatu
     string namaSepatu;
     string tanggalRilis;
     float ukuran;
-    double harga;
+    int harga;
 };
 
 extern void tampilanPembelian();

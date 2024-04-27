@@ -11,7 +11,7 @@ string dataMasuk;
 struct barang
 {
     int tempat;
-    string data[maksimal];
+    Sepatu data[maksimal];
 };
 barang sepatu;
 
@@ -44,19 +44,21 @@ bool barangBelanjaPenuh()
     }
 }
 
-void pushBarang(string dataMasuk)
+void pushBarang(Sepatu dataMasuk)
 {
     if (barangBelanjaKosong() == true)
     {
         sepatu.tempat++;
         sepatu.data[sepatu.tempat] = dataMasuk;
-        cout << "Berhasil Menambahkan sepatu [" << dataMasuk << "] ke dalam keranjang" << endl;
+        cout << "Berhasil Menambahkan sepatu [" << dataMasuk.namaSepatu << "] ke dalam keranjang" << endl;
+        cout << "Tanggal Rilis: " << dataMasuk.tanggalRilis << ", Ukuran: " << dataMasuk.ukuran << ", Harga: " << dataMasuk.harga << endl;
     }
     else if (barangBelanjaPenuh() == false)
     {
         sepatu.tempat++;
         sepatu.data[sepatu.tempat] = dataMasuk;
-        cout << "Berhasil Menambahkan sepatu [" << dataMasuk << "] ke dalam keranjang" << endl;
+        cout << "Berhasil Menambahkan sepatu [" << dataMasuk.namaSepatu << "] ke dalam keranjang" << endl;
+        cout << "Tanggal Rilis: " << dataMasuk.tanggalRilis << ", Ukuran: " << dataMasuk.ukuran << ", Harga: " << dataMasuk.harga << endl;
     }
     else
     {
@@ -72,8 +74,8 @@ void popBarang()
     }
     else
     {
+        cout << "Barang [" << sepatu.data[sepatu.tempat].namaSepatu << "] Berhasil Di Cancel" << endl;
         sepatu.tempat--;
-        cout << "Barang Berhasil Di Cancel" << endl;
     }
 }
 
@@ -87,7 +89,7 @@ void tampilanPembelian()
     {
         for (int i = 1; i <= sepatu.tempat; i++)
         {
-            cout << i << ".     " << sepatu.data[i] << endl;
+            cout << i << ". " << sepatu.data[i].namaSepatu << "  " << sepatu.data[i].tanggalRilis << "  " << sepatu.data[i].ukuran << "  " << sepatu.data[i].harga << endl;
         }
     }
 }
@@ -180,35 +182,59 @@ void loginPembeli()
                         {
                             cout << "Pilih Sepatu Anda (1/2/3/4/5/6/7/8): ";
                             cin >> pertama;
-                            string namaSepatu1;
+                            Sepatu namaSepatu1;
                             switch (pertama)
                             {
                             case 1:
-                                namaSepatu1 = "PREDATOR 24 ELITE LEKLESS";
+                                namaSepatu1.namaSepatu = "PREDATOR 24 ELITE LEKLESS";
+                                namaSepatu1.tanggalRilis = "2023-03-15";
+                                namaSepatu1.ukuran = 42;
+                                namaSepatu1.harga = 2500000;
                                 break;
                             case 2:
-                                namaSepatu1 = "SAMBA INTER MIAMI CF";
+                                namaSepatu1.namaSepatu = "SAMBA INTER MIAMI CF";
+                                namaSepatu1.tanggalRilis = "2024-01-20";
+                                namaSepatu1.ukuran = 43;
+                                namaSepatu1.harga = 1800000;
                                 break;
                             case 3:
-                                namaSepatu1 = "X CRAZYFAST ELITE FIRM";
+                                namaSepatu1.namaSepatu = "X CRAZYFAST ELITE FIRM";
+                                namaSepatu1.tanggalRilis = "2022-01-10";
+                                namaSepatu1.ukuran = 44;
+                                namaSepatu1.harga = 2200000;
                                 break;
                             case 4:
-                                namaSepatu1 = "PREDATOR LEAGUE FIRM";
+                                namaSepatu1.namaSepatu = "PREDATOR LEAGUE FIRM";
+                                namaSepatu1.tanggalRilis = "2023-12-23";
+                                namaSepatu1.ukuran = 42.5;
+                                namaSepatu1.harga = 2100000;
                                 break;
                             case 5:
-                                namaSepatu1 = "PREDATOR 24 GROUND BOOTS";
+                                namaSepatu1.namaSepatu = "PREDATOR 24 GROUND BOOTS";
+                                namaSepatu1.tanggalRilis = "2024-02-11";
+                                namaSepatu1.ukuran = 41;
+                                namaSepatu1.harga = 2300000;
                                 break;
                             case 6:
-                                namaSepatu1 = "COPA GLORD LEAGUE FIRM";
+                                namaSepatu1.namaSepatu = "COPA GLORD LEAGUE FIRM";
+                                namaSepatu1.tanggalRilis = "2024-02-19";
+                                namaSepatu1.ukuran = 43.5;
+                                namaSepatu1.harga = 1900000;
                                 break;
                             case 7:
-                                namaSepatu1 = "COLekLessPA GLORD 45";
+                                namaSepatu1.namaSepatu = "COLekLessPA GLORD 45";
+                                namaSepatu1.tanggalRilis = "2022-05-22";
+                                namaSepatu1.ukuran = 40;
+                                namaSepatu1.harga = 2000000;
                                 break;
                             case 8:
-                                namaSepatu1 = "X CRAZYFAST LEAGUE LEKLESS";
+                                namaSepatu1.namaSepatu = "X CRAZYFAST LEAGUE LEKLESS";
+                                namaSepatu1.tanggalRilis = "2023-07-30";
+                                namaSepatu1.ukuran = 42;
+                                namaSepatu1.harga = 2400000;
                                 break;
                             default:
-                                namaSepatu1 = "Pilihan tidak valid";
+                                namaSepatu1.namaSepatu = "Pilihan tidak valid";
                                 break;
                             }
                             pushBarang(namaSepatu1);
@@ -232,26 +258,41 @@ void loginPembeli()
                         {
                             cout << "Pilih Sepatu Anda (1/2/3/4/5): ";
                             cin >> kedua;
-                            string namaSepatu2;
+                            Sepatu namaSepatu2;
                             switch (kedua)
                             {
                             case 1:
-                                namaSepatu2 = "FORUM LOW SHOES";
+                                namaSepatu2.namaSepatu = "FORUM LOW SHOES";
+                                namaSepatu2.tanggalRilis = "2023-11-15";
+                                namaSepatu2.ukuran = 42;
+                                namaSepatu2.harga = 1600000;
                                 break;
                             case 2:
-                                namaSepatu2 = "SEPATU RIVALRY 86 LOW";
+                                namaSepatu2.namaSepatu = "SEPATU RIVALRY 86 LOW";
+                                namaSepatu2.tanggalRilis = "2024-03-22";
+                                namaSepatu2.ukuran = 43;
+                                namaSepatu2.harga = 1700000;
                                 break;
                             case 3:
-                                namaSepatu2 = "D.O.N. ISSUE 5 TRAINERS";
+                                namaSepatu2.namaSepatu = "D.O.N. ISSUE 5 TRAINERS";
+                                namaSepatu2.tanggalRilis = "2023-01-05";
+                                namaSepatu2.ukuran = 44;
+                                namaSepatu2.harga = 1800000;
                                 break;
                             case 4:
-                                namaSepatu2 = "AE 1 LOW SHOES";
+                                namaSepatu2.namaSepatu = "AE 1 LOW SHOES";
+                                namaSepatu2.tanggalRilis = "2022-10-10";
+                                namaSepatu2.ukuran = 42.5;
+                                namaSepatu2.harga = 1500000;
                                 break;
                             case 5:
-                                namaSepatu2 = "ADIZERO SELECT 2.0 SHOES";
+                                namaSepatu2.namaSepatu = "ADIZERO SELECT 2.0 SHOES";
+                                namaSepatu2.tanggalRilis = "2023-02-20";
+                                namaSepatu2.ukuran = 41;
+                                namaSepatu2.harga = 1900000;
                                 break;
                             default:
-                                namaSepatu2 = "Pilihan tidak valid";
+                                namaSepatu2.namaSepatu = "Pilihan tidak valid";
                                 break;
                             }
                             pushBarang(namaSepatu2);
@@ -292,7 +333,7 @@ void loginPembeli()
                 {
                     cout << " Terima Kasih Sudah Datang " << endl;
                 }
-            } while (keluar == false);
+            } while (keluar == true);
         }
         else
         {
