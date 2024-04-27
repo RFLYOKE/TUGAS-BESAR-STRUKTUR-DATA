@@ -44,19 +44,19 @@ bool barangBelanjaPenuh()
     }
 }
 
-void pushBarang(string namaSepatu)
+void pushBarang(string dataMasuk)
 {
     if (barangBelanjaKosong() == true)
     {
         sepatu.tempat++;
-        sepatu.data[sepatu.tempat] = namaSepatu;
-        cout << "Berhasil Menambahkan sepatu " << namaSepatu << " ke dalam keranjang" << endl;
+        sepatu.data[sepatu.tempat] = dataMasuk;
+        cout << "Berhasil Menambahkan sepatu " << dataMasuk << " ke dalam keranjang" << endl;
     }
     else if (barangBelanjaPenuh() == false)
     {
         sepatu.tempat++;
-        sepatu.data[sepatu.tempat] = namaSepatu;
-        cout << "Berhasil Menambahkan sepatu " << namaSepatu << " ke dalam keranjang" << endl;
+        sepatu.data[sepatu.tempat] = dataMasuk;
+        cout << "Berhasil Menambahkan sepatu " << dataMasuk << " ke dalam keranjang" << endl;
     }
     else
     {
@@ -212,7 +212,7 @@ void loginPembeli()
                                 break;
                             }
                             pushBarang(namaSepatu);
-                            cout << "Apakah anda ingin memilih lagi? (y/t)";
+                            cout << "Apakah anda ingin memilih lagi? (y/t): ";
                             cin >> yakin;
                         } while (yakin == 'y' || yakin == 'Y');
                         cout << "Silahkan Melakukan Pembayaran" << endl;
