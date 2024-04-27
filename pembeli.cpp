@@ -35,7 +35,7 @@ bool barangBelanjaPenuh(){
     }
 }
 
-void pushBarang(int dataMasuk){
+void pushBarang(string dataMasuk){
     if(barangBelanjaKosong() == true){
         sepatu.tempat++;
         sepatu.data[sepatu.tempat] = dataMasuk;
