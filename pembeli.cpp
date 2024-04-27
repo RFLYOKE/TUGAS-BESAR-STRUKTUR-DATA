@@ -11,7 +11,7 @@ string dataMasuk;
 struct barang
 {
     int tempat;
-    string data[maksimal];
+    Sepatu data[maksimal];
 }; barang sepatu;
 
 
