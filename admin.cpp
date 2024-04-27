@@ -1,5 +1,4 @@
 #include <iostream>
-#include "listSepatu.cpp"
 using namespace std;
 
 const string username = "admin";
