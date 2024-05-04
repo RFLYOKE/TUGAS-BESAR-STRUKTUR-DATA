@@ -11,14 +11,8 @@ string dataMasuk;
 struct barang
 {
     int tempat;
-<<<<<<< HEAD
     string data[maksimal];
 }; barang sepatu;
-=======
-    Sepatu data[maksimal];
-};
-barang sepatu;
->>>>>>> 2a5ad59535493f16b61c34703177023f7f19a13a
 
 void inisialisasi()
 {
