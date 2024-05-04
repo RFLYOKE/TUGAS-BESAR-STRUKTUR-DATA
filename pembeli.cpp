@@ -11,9 +11,14 @@ string dataMasuk;
 struct barang
 {
     int tempat;
+<<<<<<< HEAD
+    string data[maksimal];
+}; barang sepatu;
+=======
     Sepatu data[maksimal];
 };
 barang sepatu;
+>>>>>>> 2a5ad59535493f16b61c34703177023f7f19a13a
 
 void inisialisasi()
 {
@@ -321,7 +326,88 @@ void loginPembeli()
                             cout << "Silahkan Melakukan Pembayaran" << endl;
                             break;
                         case 3:
-
+                            int ketiga;
+                            cout << "================================" << endl;
+                            cout << "       DAFTAR SEPATU RUNNING     " << endl;
+                            cout << "================================" << endl;
+                            cout << "| 1.|SUPERNOVA EARTH DAY SHOES    |" << endl;
+                            cout << "| 2.|ADIZERO TAKUMI SEN 10        |" << endl;
+                            cout << "| 3.|ADIZERO SL                   |" << endl;
+                            cout << "| 4.|ULTRABOOST LIGHT             |" << endl;
+                            cout << "| 5.|PUREBOOST 23                 |" << endl;
+                            cout << "| 6.|ADIZERO ADIOS PRO 3 M        |" << endl;
+                            cout << "| 7.|ADIZERO PRIME X 2.0 STRUNG   |" << endl;
+                            cout << "| 8.|ADIZERO BOSTON 12            |" << endl;
+                            cout << "================================" << endl;
+                            do
+                            {
+                                cout << "Pilih Sepatu Anda (1/2/3/4/5): ";
+                                cin >> ketiga;
+                                if (ketiga < 1 || ketiga > 5)
+                                {
+                                    cout << "Pilihan tidak valid, keluar dari menu sepatu." << endl;
+                                    break;
+                                }
+                                Sepatu namaSepatu2;
+                                switch (ketiga)
+                                {
+                                case 1:
+                                    namaSepatu2.namaSepatu = "SUPERNOVA EARTH DAY SHOES";
+                                    namaSepatu2.tanggalRilis = "2023-12-14";
+                                    namaSepatu2.ukuran = 42;
+                                    namaSepatu2.harga = 2200000;
+                                    break;
+                                case 2:
+                                    namaSepatu2.namaSepatu = "ADIZERO TAKUMI SEN 10";
+                                    namaSepatu2.tanggalRilis = "2024-02-22";
+                                    namaSepatu2.ukuran = 43;
+                                    namaSepatu2.harga = 3200000;
+                                    break;
+                                case 3:
+                                    namaSepatu2.namaSepatu = "ADIZERO SL";
+                                    namaSepatu2.tanggalRilis = "2024-01-05";
+                                    namaSepatu2.ukuran = 44;
+                                    namaSepatu2.harga = 2000000;
+                                    break;
+                                case 4:
+                                    namaSepatu2.namaSepatu = "ULTRABOOST LIGHT";
+                                    namaSepatu2.tanggalRilis = "2024-01-10";
+                                    namaSepatu2.ukuran = 42.5;
+                                    namaSepatu2.harga = 3300000;
+                                    break;
+                                case 5:
+                                    namaSepatu2.namaSepatu = "PUREBOOST 23";
+                                    namaSepatu2.tanggalRilis = "2024-02-20";
+                                    namaSepatu2.ukuran = 41;
+                                    namaSepatu2.harga = 2100000;
+                                    break;
+                                case 6:
+                                    namaSepatu2.namaSepatu = "ADIZERO ADIOS PRO 3 M";
+                                    namaSepatu2.tanggalRilis = "2024-02-27";
+                                    namaSepatu2.ukuran = 41;
+                                    namaSepatu2.harga = 4000000;
+                                    break;
+                                case 7:
+                                    namaSepatu2.namaSepatu = "ADIZERO PRIME X 2.0 STRUNG";
+                                    namaSepatu2.tanggalRilis = "2024-02-20";
+                                    namaSepatu2.ukuran = 41;
+                                    namaSepatu2.harga = 4300000;
+                                    break;
+                                case 8:
+                                    namaSepatu2.namaSepatu = "SEPATU ADIZERO BOSTON 12";
+                                    namaSepatu2.tanggalRilis = "2024-03-22";
+                                    namaSepatu2.ukuran = 41;
+                                    namaSepatu2.harga = 2300000;
+                                    break;    
+                                default:
+                                    cout << "Pilihan tidak valid" << endl;
+                                    continue;
+                                }
+                                pushBarang(namaSepatu2);
+                                cout << "Apakah anda ingin memilih lagi? (y/t): ";
+                                cin >> yakin;
+                            } while (yakin == 'y' || yakin == 'Y');
+                            cout << "Silahkan Melakukan Pembayaran" << endl;
                             break;
                         case 4:
 
