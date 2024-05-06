@@ -89,7 +89,7 @@ void tampilanPembelian()
     {
         for (int i = 1; i <= sepatu.tempat; i++)
         {
-            cout << i << ". " << sepatu.data[i].namaSepatu << "  " << sepatu.data[i].tanggalRilis << "  " << sepatu.data[i].ukuran << "  " << sepatu.data[i].harga << endl;
+            cout << i << ". " << sepatu.data[i].namaSepatu << "   " << sepatu.data[i].tanggalRilis << "   " << sepatu.data[i].ukuran << "   " << sepatu.data[i].harga << endl;
         }
     }
 }
@@ -159,7 +159,7 @@ void loginPembeli()
                         cout << "| 1.| Sepatu Sepak Bola             |" << endl;
                         cout << "| 2.| Sepatu Basket                 |" << endl;
                         cout << "| 3.| Sepatu Running                |" << endl;
-                        cout << "| 4.| Sepatu Sekolah                |" << endl;
+                        cout << "| 4.| Sepatu Original               |" << endl;
                         cout << "====================================" << endl;
                         cout << "Silahkan pilih kategori anda: ";
                         cin >> pilihanku;
@@ -324,7 +324,116 @@ void loginPembeli()
 
                             break;
                         case 4:
-
+                            int ketiga;
+                            cout << "================================" << endl;
+                            cout << "       DAFTAR SEPATU ORIGINAL   " << endl;
+                            cout << "================================" << endl;
+                            cout << "| 1. |SEPATU SAMBA OG          |" << endl;
+                            cout << "| 2. |ABIBAS_N_BAPE            |" << endl;
+                            cout << "| 3. |SAMBA XLG SHOES          |" << endl;
+                            cout << "| 4. |LONDON SHOES             |" << endl;
+                            cout << "| 5. |GAZELLE 85 SHOES         |" << endl;
+                            cout << "| 6. |GAZELLE LOW TRAINERS     |" << endl;
+                            cout << "| 7. |SL 72 RS SHOES           |" << endl;
+                            cout << "| 8. |HANDBALL SPEZIAL SHOES   |" << endl;
+                            cout << "| 9. |CAMPUS 00S               |" << endl;
+                            cout << "| 10.|NMD_R1 SHOES             |" << endl;
+                            cout << "| 11.|COUNTRY XLG SHOES        |" << endl;
+                            cout << "| 12.|OZMILLEN                 |" << endl;
+                            cout << "================================" << endl;
+                            do
+                            {
+                                cout << "Pilih Sepatu Anda (1/2/3/4/5/6/7/8/9/10/11/12): ";
+                                cin >> ketiga;
+                                if (ketiga < 1 || ketiga > 5)
+                                {
+                                    cout << "Pilihan tidak valid, keluar dari menu sepatu." << endl;
+                                    break;
+                                }
+                                Sepatu namaSepatu4;
+                                switch (ketiga)
+                                {
+                                case 1:
+                                    namaSepatu4.namaSepatu = "SEPATU SAMBA OG";
+                                    namaSepatu4.tanggalRilis = "2023-12-14";
+                                    namaSepatu4.ukuran = 42;
+                                    namaSepatu4.harga = 2200000;
+                                    break;
+                                case 2:
+                                    namaSepatu4.namaSepatu = "ABIBAS_N_BAPE";
+                                    namaSepatu4.tanggalRilis = "2024-02-22";
+                                    namaSepatu4.ukuran = 43;
+                                    namaSepatu4.harga = 2300000;
+                                    break;
+                                case 3:
+                                    namaSepatu4.namaSepatu = "SAMBA XLG SHOES";
+                                    namaSepatu4.tanggalRilis = "2024-01-05";
+                                    namaSepatu4.ukuran = 44;
+                                    namaSepatu4.harga = 2400000;
+                                    break;
+                                case 4:
+                                    namaSepatu4.namaSepatu = "LONDON SHOES";
+                                    namaSepatu4.tanggalRilis = "2024-01-10";
+                                    namaSepatu4.ukuran = 42.5;
+                                    namaSepatu4.harga = 2200000;
+                                    break;
+                                case 5:
+                                    namaSepatu4.namaSepatu = "GAZELLE 85 SHOES";
+                                    namaSepatu4.tanggalRilis = "2024-02-20";
+                                    namaSepatu4.ukuran = 41;
+                                    namaSepatu4.harga = 2000000;
+                                    break;
+                                case 6:
+                                    namaSepatu4.namaSepatu = "GAZELLE LOW TRAINERS";
+                                    namaSepatu4.tanggalRilis = "2024-02-27";
+                                    namaSepatu4.ukuran = 41;
+                                    namaSepatu4.harga = 2000000;
+                                    break;
+                                case 7:
+                                    namaSepatu4.namaSepatu = "SL 72 RS SHOES";
+                                    namaSepatu4.tanggalRilis = "2024-02-20";
+                                    namaSepatu4.ukuran = 41;
+                                    namaSepatu4.harga = 1600000;
+                                    break;
+                                case 8:
+                                    namaSepatu4.namaSepatu = "HANDBALL SPEZIAL SHOES";
+                                    namaSepatu4.tanggalRilis = "2024-01-22";
+                                    namaSepatu4.ukuran = 41;
+                                    namaSepatu4.harga = 1700000;
+                                    break;
+                                case 9:
+                                    namaSepatu4.namaSepatu = "CAMPUS 00S";
+                                    namaSepatu4.tanggalRilis = "2023-03-22";
+                                    namaSepatu4.ukuran = 41;
+                                    namaSepatu4.harga = 2200000;
+                                    break;
+                                case 10:
+                                    namaSepatu4.namaSepatu = "NMD_R1 SHOES";
+                                    namaSepatu4.tanggalRilis = "2024-03-02";
+                                    namaSepatu4.ukuran = 41;
+                                    namaSepatu4.harga = 2300000;
+                                    break;
+                                case 11:
+                                    namaSepatu4.namaSepatu = "COUNTRY XLG SHOES";
+                                    namaSepatu4.tanggalRilis = "2023-12-12";
+                                    namaSepatu4.ukuran = 41;
+                                    namaSepatu4.harga = 1700000;
+                                    break;
+                                case 12:
+                                    namaSepatu4.namaSepatu = "OZMILLEN";
+                                    namaSepatu4.tanggalRilis = "2023-11-14";
+                                    namaSepatu4.ukuran = 41;
+                                    namaSepatu4.harga = 1700000;
+                                    break;
+                                default:
+                                    cout << "Pilihan tidak valid" << endl;
+                                    continue;
+                                }
+                                pushBarang(namaSepatu4);
+                                cout << "Apakah anda ingin memilih lagi? (y/t): ";
+                                cin >> yakin;
+                            } while (yakin == 'y' || yakin == 'Y');
+                            cout << "Silahkan Melakukan Pembayaran" << endl;
                             break;
                         default:
                             cout << "Pilihan yang anda masukkan salah, coba lagi \n";
@@ -342,6 +451,7 @@ void loginPembeli()
                     cout << "=========================" << endl;
                     cout << "     Menu Pembayaran     " << endl;
                     cout << "=========================" << endl;
+                    
                     break;
                 case 0:
                     cout << "Terima Kasih Sudah Datang" << endl;
