@@ -252,6 +252,7 @@ void loginPembeli()
                                     continue;
                                 }
                                 pushBarang(namaSepatu1);
+                                cout << endl;
                                 cout << "Apakah anda ingin memilih lagi? (y/t): ";
                                 cin >> yakin;
                             } while (yakin == 'y' || yakin == 'Y');
@@ -315,16 +316,85 @@ void loginPembeli()
                                     continue;
                                 }
                                 pushBarang(namaSepatu2);
+                                cout << endl;
                                 cout << "Apakah anda ingin memilih lagi? (y/t): ";
                                 cin >> yakin;
                             } while (yakin == 'y' || yakin == 'Y');
                             cout << "Silahkan Melakukan Pembayaran" << endl;
                             break;
                         case 3:
-
+                            int ketiga;
+                            cout << "================================" << endl;
+                            cout << "       DAFTAR SEPATU BASKET     " << endl;
+                            cout << "================================" << endl;
+                            cout << "| 1.|SEPATU SAMBA OG            |" << endl;
+                            cout << "| 2.|ADIDAS N BAPE              |" << endl;
+                            cout << "| 3.|GAZELLE LOW TRAINERS       |" << endl;
+                            cout << "| 4.|SAMBA XYZ SHOEAS           |" << endl;
+                            cout << "| 5.|LONDON SHOES               |" << endl;
+                            cout << "| 6.|SL 72 RS SHOES             |" << endl;
+                            cout << "================================" << endl;
+                            do
+                            {
+                                cout << "Pilih Sepatu Anda (1/2/3/4/5/6): ";
+                                cin >> ketiga;
+                                if (ketiga < 1 || ketiga > 6)
+                                {
+                                    cout << "Pilihan tidak valid, keluar dari menu sepatu." << endl;
+                                    break;
+                                }
+                                Sepatu namaSepatu3;
+                                switch (ketiga)
+                                {
+                                case 1:
+                                    namaSepatu3.namaSepatu = "SEPATU SAMBA OG";
+                                    namaSepatu3.tanggalRilis = "2023-12-15";
+                                    namaSepatu3.ukuran = 42;
+                                    namaSepatu3.harga = 1600000;
+                                    break;
+                                case 2:
+                                    namaSepatu3.namaSepatu = "ADIDAS N BAPE";
+                                    namaSepatu3.tanggalRilis = "2024-03-21";
+                                    namaSepatu3.ukuran = 43;
+                                    namaSepatu3.harga = 1700000;
+                                    break;
+                                case 3:
+                                    namaSepatu3.namaSepatu = "GAZELLE LOW TRAINERS";
+                                    namaSepatu3.tanggalRilis = "2024-01-05";
+                                    namaSepatu3.ukuran = 44;
+                                    namaSepatu3.harga = 1800000;
+                                    break;
+                                case 4:
+                                    namaSepatu3.namaSepatu = "SAMBA XYZ SHOEAS";
+                                    namaSepatu3.tanggalRilis = "2022-08-10";
+                                    namaSepatu3.ukuran = 42.5;
+                                    namaSepatu3.harga = 1500000;
+                                    break;
+                                case 5:
+                                    namaSepatu3.namaSepatu = "LONDON SHOES";
+                                    namaSepatu3.tanggalRilis = "2021-02-20";
+                                    namaSepatu3.ukuran = 41;
+                                    namaSepatu3.harga = 1900000;
+                                    break;
+                                case 6:
+                                    namaSepatu3.namaSepatu = "SL 72 RS SHOES";
+                                    namaSepatu3.tanggalRilis = "2024-02-30";
+                                    namaSepatu3.ukuran = 41;
+                                    namaSepatu3.harga = 1900000;
+                                    break;
+                                default:
+                                    cout << "Pilihan tidak valid" << endl;
+                                    continue;
+                                }
+                                pushBarang(namaSepatu3);
+                                cout << endl;
+                                cout << "Apakah anda ingin memilih lagi? (y/t): ";
+                                cin >> yakin;
+                            } while (yakin == 'y' || yakin == 'Y');
+                            cout << "Silahkan Melakukan Pembayaran" << endl;
                             break;
                         case 4:
-                            int ketiga;
+                            int keempat;
                             cout << "================================" << endl;
                             cout << "       DAFTAR SEPATU ORIGINAL   " << endl;
                             cout << "================================" << endl;
@@ -344,14 +414,14 @@ void loginPembeli()
                             do
                             {
                                 cout << "Pilih Sepatu Anda (1/2/3/4/5/6/7/8/9/10/11/12): ";
-                                cin >> ketiga;
-                                if (ketiga < 1 || ketiga > 5)
+                                cin >> keempat;
+                                if (keempat < 1 || keempat > 12)
                                 {
                                     cout << "Pilihan tidak valid, keluar dari menu sepatu." << endl;
                                     break;
                                 }
                                 Sepatu namaSepatu4;
-                                switch (ketiga)
+                                switch (keempat)
                                 {
                                 case 1:
                                     namaSepatu4.namaSepatu = "SEPATU SAMBA OG";
@@ -430,10 +500,12 @@ void loginPembeli()
                                     continue;
                                 }
                                 pushBarang(namaSepatu4);
+                                cout << endl;
                                 cout << "Apakah anda ingin memilih lagi? (y/t): ";
                                 cin >> yakin;
                             } while (yakin == 'y' || yakin == 'Y');
                             cout << "Silahkan Melakukan Pembayaran" << endl;
+
                             break;
                         default:
                             cout << "Pilihan yang anda masukkan salah, coba lagi \n";
