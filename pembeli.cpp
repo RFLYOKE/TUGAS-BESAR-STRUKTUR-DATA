@@ -8,6 +8,7 @@ char yakin;
 int pilihan;
 string dataMasuk;
 
+
 struct barang
 {
     int tempat;
@@ -202,14 +203,90 @@ void loginPembeli()
                                 case 1:
                                     namaSepatu1.namaSepatu = "PREDATOR 24 ELITE LEKLESS";
                                     namaSepatu1.tanggalRilis = "2023-03-15";
-                                    namaSepatu1.ukuran = 42;
                                     namaSepatu1.harga = 2500000;
+                                    cout << endl;
+                                    int pilUkuran1, ukuran1;
+                                    while (pilUkuran1 < 1 || pilUkuran1 > 5)
+                                    {
+                                        cout << "=================" << endl;
+                                        cout << "  Ukuran sepatu  " << endl;
+                                        cout << "=================" << endl;
+                                        cout << "| 1.| 36        |" << endl;
+                                        cout << "| 2.| 37        |" << endl;
+                                        cout << "| 3.| 39        |" << endl;
+                                        cout << "| 4.| 40        |" << endl;
+                                        cout << "| 5.| 42        |" << endl;
+                                        cout << "=================" << endl;
+                                        cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
+                                        cin >> pilUkuran1;
+                                        switch (pilUkuran1)
+                                        {
+                                        case 1:
+                                            ukuran1 = 36;
+                                            break;
+                                        case 2:
+                                            ukuran1 = 37;
+                                            break;
+                                        case 3:
+                                            ukuran1 = 39;
+                                            break;
+                                        case 4:
+                                            ukuran1 = 40;
+                                            break;
+                                        case 5:
+                                            ukuran1 = 42;
+                                            break;
+                                        default:
+                                            cout << "Ukuran sepatu yang Anda pilih tidak tersedia. Silahkan coba lagi." << endl;
+                                            cout << "Atau hubungi admin (0856-1404-1223)" << endl;
+                                            continue;
+                                        }
+                                    }
+                                    namaSepatu1.ukuran = ukuran1;
                                     break;
                                 case 2:
                                     namaSepatu1.namaSepatu = "SAMBA INTER MIAMI CF";
                                     namaSepatu1.tanggalRilis = "2024-01-20";
-                                    namaSepatu1.ukuran = 43;
                                     namaSepatu1.harga = 1800000;
+                                    cout << endl;
+                                    int pilUkuran2, ukuran2;
+                                    while (pilUkuran2 < 1 || pilUkuran2 > 5)
+                                    {
+                                        cout << "=================" << endl;
+                                        cout << "  Ukuran sepatu  " << endl;
+                                        cout << "=================" << endl;
+                                        cout << "| 1.| 36        |" << endl;
+                                        cout << "| 2.| 37        |" << endl;
+                                        cout << "| 3.| 39        |" << endl;
+                                        cout << "| 4.| 40        |" << endl;
+                                        cout << "| 5.| 42        |" << endl;
+                                        cout << "=================" << endl;
+                                        cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
+                                        cin >> pilUkuran2;
+                                        switch (pilUkuran2)
+                                        {
+                                        case 1:
+                                            ukuran2 = 36;
+                                            break;
+                                        case 2:
+                                            ukuran2 = 37;
+                                            break;
+                                        case 3:
+                                            ukuran2 = 39;
+                                            break;
+                                        case 4:
+                                            ukuran2 = 40;
+                                            break;
+                                        case 5:
+                                            ukuran2 = 42;
+                                            break;
+                                        default:
+                                            cout << "Ukuran sepatu yang Anda pilih tidak tersedia. Silahkan coba lagi." << endl;
+                                            cout << "Atau hubungi admin (0856-1404-1223)" << endl;
+                                            continue;
+                                        }
+                                    }
+                                    namaSepatu1.ukuran = ukuran2;
                                     break;
                                 case 3:
                                     namaSepatu1.namaSepatu = "X CRAZYFAST ELITE FIRM";
@@ -253,7 +330,7 @@ void loginPembeli()
                                 }
                                 pushBarang(namaSepatu1);
                                 cout << endl;
-                                cout << "Apakah anda ingin memilih lagi? (y/t): ";
+                                cout << "Apakah anda ingin memilih sepatu lagi? (y/t): ";
                                 cin >> yakin;
                             } while (yakin == 'y' || yakin == 'Y');
                             cout << "Silahkan Melakukan Pembayaran" << endl;
@@ -317,7 +394,7 @@ void loginPembeli()
                                 }
                                 pushBarang(namaSepatu2);
                                 cout << endl;
-                                cout << "Apakah anda ingin memilih lagi? (y/t): ";
+                                cout << "Apakah anda ingin memilih sepatu lagi? (y/t): ";
                                 cin >> yakin;
                             } while (yakin == 'y' || yakin == 'Y');
                             cout << "Silahkan Melakukan Pembayaran" << endl;
@@ -388,7 +465,7 @@ void loginPembeli()
                                 }
                                 pushBarang(namaSepatu3);
                                 cout << endl;
-                                cout << "Apakah anda ingin memilih lagi? (y/t): ";
+                                cout << "Apakah anda ingin memilih sepatu lagi? (y/t): ";
                                 cin >> yakin;
                             } while (yakin == 'y' || yakin == 'Y');
                             cout << "Silahkan Melakukan Pembayaran" << endl;
@@ -501,11 +578,10 @@ void loginPembeli()
                                 }
                                 pushBarang(namaSepatu4);
                                 cout << endl;
-                                cout << "Apakah anda ingin memilih lagi? (y/t): ";
+                                cout << "Apakah anda ingin memilih sepatu lagi? (y/t): ";
                                 cin >> yakin;
                             } while (yakin == 'y' || yakin == 'Y');
                             cout << "Silahkan Melakukan Pembayaran" << endl;
-
                             break;
                         default:
                             cout << "Pilihan yang anda masukkan salah, coba lagi \n";
