@@ -291,38 +291,266 @@ void loginPembeli()
                                 case 3:
                                     namaSepatu1.namaSepatu = "X CRAZYFAST ELITE FIRM";
                                     namaSepatu1.tanggalRilis = "2022-01-10";
-                                    namaSepatu1.ukuran = 44;
                                     namaSepatu1.harga = 2200000;
+                                    cout << endl;
+                                    int pilUkuran3, ukuran3;
+                                    while (pilUkuran3 < 1 || pilUkuran3 > 5)
+                                    {
+                                        cout << "=================" << endl;
+                                        cout << "  Ukuran sepatu  " << endl;
+                                        cout << "=================" << endl;
+                                        cout << "| 1.| 36        |" << endl;
+                                        cout << "| 2.| 37        |" << endl;
+                                        cout << "| 3.| 39        |" << endl;
+                                        cout << "| 4.| 40        |" << endl;
+                                        cout << "| 5.| 42        |" << endl;
+                                        cout << "=================" << endl;
+                                        cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
+                                        cin >> pilUkuran3;
+                                        switch (pilUkuran3)
+                                        {
+                                        case 1:
+                                            ukuran3 = 36;
+                                            break;
+                                        case 2:
+                                            ukuran3 = 37;
+                                            break;
+                                        case 3:
+                                            ukuran3 = 39;
+                                            break;
+                                        case 4:
+                                            ukuran3 = 40;
+                                            break;
+                                        case 5:
+                                            ukuran3 = 42;
+                                            break;
+                                        default:
+                                            cout << "Ukuran sepatu yang Anda pilih tidak tersedia. Silahkan coba lagi." << endl;
+                                            cout << "Atau hubungi admin (0856-1404-1223)" << endl;
+                                            continue;
+                                        }
+                                    }
+                                    namaSepatu1.ukuran = ukuran3;
                                     break;
                                 case 4:
                                     namaSepatu1.namaSepatu = "PREDATOR LEAGUE FIRM";
                                     namaSepatu1.tanggalRilis = "2023-12-23";
-                                    namaSepatu1.ukuran = 42.5;
                                     namaSepatu1.harga = 2100000;
+                                    cout << endl;
+                                    int pilUkuran4, ukuran4;
+                                    while (pilUkuran4 < 1 || pilUkuran4 > 5)
+                                    {
+                                        cout << "=================" << endl;
+                                        cout << "  Ukuran sepatu  " << endl;
+                                        cout << "=================" << endl;
+                                        cout << "| 1.| 36        |" << endl;
+                                        cout << "| 2.| 37        |" << endl;
+                                        cout << "| 3.| 39        |" << endl;
+                                        cout << "| 4.| 40        |" << endl;
+                                        cout << "| 5.| 42        |" << endl;
+                                        cout << "=================" << endl;
+                                        cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
+                                        cin >> pilUkuran4;
+                                        switch (pilUkuran4)
+                                        {
+                                        case 1:
+                                            ukuran4 = 36;
+                                            break;
+                                        case 2:
+                                            ukuran4 = 37;
+                                            break;
+                                        case 3:
+                                            ukuran4 = 39;
+                                            break;
+                                        case 4:
+                                            ukuran4 = 40;
+                                            break;
+                                        case 5:
+                                            ukuran4 = 42;
+                                            break;
+                                        default:
+                                            cout << "Ukuran sepatu yang Anda pilih tidak tersedia. Silahkan coba lagi." << endl;
+                                            cout << "Atau hubungi admin (0856-1404-1223)" << endl;
+                                            continue;
+                                        }
+                                    }
+                                    namaSepatu1.ukuran = ukuran4;
                                     break;
                                 case 5:
                                     namaSepatu1.namaSepatu = "PREDATOR 24 GROUND BOOTS";
                                     namaSepatu1.tanggalRilis = "2024-02-11";
                                     namaSepatu1.ukuran = 41;
-                                    namaSepatu1.harga = 2300000;
+                                    cout << endl;
+                                    int pilUkuran5, ukuran5;
+                                    while (pilUkuran5 < 1 || pilUkuran5 > 5)
+                                    {
+                                        cout << "=================" << endl;
+                                        cout << "  Ukuran sepatu  " << endl;
+                                        cout << "=================" << endl;
+                                        cout << "| 1.| 36        |" << endl;
+                                        cout << "| 2.| 37        |" << endl;
+                                        cout << "| 3.| 39        |" << endl;
+                                        cout << "| 4.| 40        |" << endl;
+                                        cout << "| 5.| 42        |" << endl;
+                                        cout << "=================" << endl;
+                                        cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
+                                        cin >> pilUkuran5;
+                                        switch (pilUkuran5)
+                                        {
+                                        case 1:
+                                            ukuran5 = 36;
+                                            break;
+                                        case 2:
+                                            ukuran5 = 37;
+                                            break;
+                                        case 3:
+                                            ukuran5 = 39;
+                                            break;
+                                        case 4:
+                                            ukuran5 = 40;
+                                            break;
+                                        case 5:
+                                            ukuran5 = 42;
+                                            break;
+                                        default:
+                                            cout << "Ukuran sepatu yang Anda pilih tidak tersedia. Silahkan coba lagi." << endl;
+                                            cout << "Atau hubungi admin (0856-1404-1223)" << endl;
+                                            continue;
+                                        }
+                                    }
+                                    namaSepatu1.ukuran = ukuran5;
                                     break;
                                 case 6:
                                     namaSepatu1.namaSepatu = "COPA GLORD LEAGUE FIRM";
                                     namaSepatu1.tanggalRilis = "2024-02-19";
-                                    namaSepatu1.ukuran = 43.5;
                                     namaSepatu1.harga = 1900000;
+                                    cout << endl;
+                                    int pilUkuran6, ukuran6;
+                                    while (pilUkuran6 < 1 || pilUkuran6 > 5)
+                                    {
+                                        cout << "=================" << endl;
+                                        cout << "  Ukuran sepatu  " << endl;
+                                        cout << "=================" << endl;
+                                        cout << "| 1.| 36        |" << endl;
+                                        cout << "| 2.| 37        |" << endl;
+                                        cout << "| 3.| 39        |" << endl;
+                                        cout << "| 4.| 40        |" << endl;
+                                        cout << "| 5.| 42        |" << endl;
+                                        cout << "=================" << endl;
+                                        cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
+                                        cin >> pilUkuran6;
+                                        switch (pilUkuran6)
+                                        {
+                                        case 1:
+                                            ukuran6 = 36;
+                                            break;
+                                        case 2:
+                                            ukuran6 = 37;
+                                            break;
+                                        case 3:
+                                            ukuran6 = 39;
+                                            break;
+                                        case 4:
+                                            ukuran6 = 40;
+                                            break;
+                                        case 5:
+                                            ukuran6 = 42;
+                                            break;
+                                        default:
+                                            cout << "Ukuran sepatu yang Anda pilih tidak tersedia. Silahkan coba lagi." << endl;
+                                            cout << "Atau hubungi admin (0856-1404-1223)" << endl;
+                                            continue;
+                                        }
+                                    }
+                                    namaSepatu1.ukuran = ukuran6;
                                     break;
                                 case 7:
                                     namaSepatu1.namaSepatu = "COLekLessPA GLORD 45";
                                     namaSepatu1.tanggalRilis = "2022-05-22";
-                                    namaSepatu1.ukuran = 40;
                                     namaSepatu1.harga = 2000000;
+                                    cout << endl;
+                                    int pilUkuran7, ukuran7;
+                                    while (pilUkuran7 < 1 || pilUkuran7 > 5)
+                                    {
+                                        cout << "=================" << endl;
+                                        cout << "  Ukuran sepatu  " << endl;
+                                        cout << "=================" << endl;
+                                        cout << "| 1.| 36        |" << endl;
+                                        cout << "| 2.| 37        |" << endl;
+                                        cout << "| 3.| 39        |" << endl;
+                                        cout << "| 4.| 40        |" << endl;
+                                        cout << "| 5.| 42        |" << endl;
+                                        cout << "=================" << endl;
+                                        cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
+                                        cin >> pilUkuran7;
+                                        switch (pilUkuran7)
+                                        {
+                                        case 1:
+                                            ukuran7 = 36;
+                                            break;
+                                        case 2:
+                                            ukuran7 = 37;
+                                            break;
+                                        case 3:
+                                            ukuran7 = 39;
+                                            break;
+                                        case 4:
+                                            ukuran7 = 40;
+                                            break;
+                                        case 5:
+                                            ukuran7 = 42;
+                                            break;
+                                        default:
+                                            cout << "Ukuran sepatu yang Anda pilih tidak tersedia. Silahkan coba lagi." << endl;
+                                            cout << "Atau hubungi admin (0856-1404-1223)" << endl;
+                                            continue;
+                                        }
+                                    }
+                                    namaSepatu1.ukuran = ukuran7;
                                     break;
                                 case 8:
                                     namaSepatu1.namaSepatu = "X CRAZYFAST LEAGUE LEKLESS";
                                     namaSepatu1.tanggalRilis = "2023-07-30";
-                                    namaSepatu1.ukuran = 42;
                                     namaSepatu1.harga = 2400000;
+                                     cout << endl;
+                                    int pilUkuran8, ukuran8;
+                                    while (pilUkuran8 < 1 || pilUkuran8 > 5)
+                                    {
+                                        cout << "=================" << endl;
+                                        cout << "  Ukuran sepatu  " << endl;
+                                        cout << "=================" << endl;
+                                        cout << "| 1.| 36        |" << endl;
+                                        cout << "| 2.| 37        |" << endl;
+                                        cout << "| 3.| 39        |" << endl;
+                                        cout << "| 4.| 40        |" << endl;
+                                        cout << "| 5.| 42        |" << endl;
+                                        cout << "=================" << endl;
+                                        cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
+                                        cin >> pilUkuran8;
+                                        switch (pilUkuran8)
+                                        {
+                                        case 1:
+                                            ukuran8 = 36;
+                                            break;
+                                        case 2:
+                                            ukuran8 = 37;
+                                            break;
+                                        case 3:
+                                            ukuran8 = 39;
+                                            break;
+                                        case 4:
+                                            ukuran8 = 40;
+                                            break;
+                                        case 5:
+                                            ukuran8 = 42;
+                                            break;
+                                        default:
+                                            cout << "Ukuran sepatu yang Anda pilih tidak tersedia. Silahkan coba lagi." << endl;
+                                            cout << "Atau hubungi admin (0856-1404-1223)" << endl;
+                                            continue;
+                                        }
+                                    }
+                                    namaSepatu1.ukuran = ukuran8;
                                     break;
                                 default:
                                     cout << "Pilihan tidak valid" << endl;
@@ -361,32 +589,222 @@ void loginPembeli()
                                 case 1:
                                     namaSepatu2.namaSepatu = "FORUM LOW SHOES";
                                     namaSepatu2.tanggalRilis = "2023-11-15";
-                                    namaSepatu2.ukuran = 42;
                                     namaSepatu2.harga = 1600000;
+                                     cout << endl;
+                                    int pilUkuran1, ukuran1;
+                                    while (pilUkuran1 < 1 || pilUkuran1 > 5)
+                                    {
+                                        cout << "=================" << endl;
+                                        cout << "  Ukuran sepatu  " << endl;
+                                        cout << "=================" << endl;
+                                        cout << "| 1.| 36        |" << endl;
+                                        cout << "| 2.| 37        |" << endl;
+                                        cout << "| 3.| 39        |" << endl;
+                                        cout << "| 4.| 40        |" << endl;
+                                        cout << "| 5.| 42        |" << endl;
+                                        cout << "=================" << endl;
+                                        cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
+                                        cin >> pilUkuran1;
+                                        switch (pilUkuran1)
+                                        {
+                                        case 1:
+                                            ukuran1 = 36;
+                                            break;
+                                        case 2:
+                                            ukuran1 = 37;
+                                            break;
+                                        case 3:
+                                            ukuran1 = 39;
+                                            break;
+                                        case 4:
+                                            ukuran1 = 40;
+                                            break;
+                                        case 5:
+                                            ukuran1 = 42;
+                                            break;
+                                        default:
+                                            cout << "Ukuran sepatu yang Anda pilih tidak tersedia. Silahkan coba lagi." << endl;
+                                            cout << "Atau hubungi admin (0856-1404-1223)" << endl;
+                                            continue;
+                                        }
+                                    }
+                                    namaSepatu2.ukuran = ukuran1;
                                     break;
                                 case 2:
                                     namaSepatu2.namaSepatu = "SEPATU RIVALRY 86 LOW";
                                     namaSepatu2.tanggalRilis = "2024-03-22";
-                                    namaSepatu2.ukuran = 43;
                                     namaSepatu2.harga = 1700000;
+                                     cout << endl;
+                                    int pilUkuran2, ukuran2;
+                                    while (pilUkuran2 < 1 || pilUkuran2 > 5)
+                                    {
+                                        cout << "=================" << endl;
+                                        cout << "  Ukuran sepatu  " << endl;
+                                        cout << "=================" << endl;
+                                        cout << "| 1.| 36        |" << endl;
+                                        cout << "| 2.| 37        |" << endl;
+                                        cout << "| 3.| 39        |" << endl;
+                                        cout << "| 4.| 40        |" << endl;
+                                        cout << "| 5.| 42        |" << endl;
+                                        cout << "=================" << endl;
+                                        cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
+                                        cin >> pilUkuran2;
+                                        switch (pilUkuran2)
+                                        {
+                                        case 1:
+                                            ukuran2 = 36;
+                                            break;
+                                        case 2:
+                                            ukuran2 = 37;
+                                            break;
+                                        case 3:
+                                            ukuran2 = 39;
+                                            break;
+                                        case 4:
+                                            ukuran2 = 40;
+                                            break;
+                                        case 5:
+                                            ukuran2 = 42;
+                                            break;
+                                        default:
+                                            cout << "Ukuran sepatu yang Anda pilih tidak tersedia. Silahkan coba lagi." << endl;
+                                            cout << "Atau hubungi admin (0856-1404-1223)" << endl;
+                                            continue;
+                                        }
+                                    }
+                                    namaSepatu2.ukuran = ukuran2;
                                     break;
                                 case 3:
                                     namaSepatu2.namaSepatu = "D.O.N. ISSUE 5 TRAINERS";
                                     namaSepatu2.tanggalRilis = "2023-01-05";
-                                    namaSepatu2.ukuran = 44;
                                     namaSepatu2.harga = 1800000;
+                                     cout << endl;
+                                    int pilUkuran3, ukuran3;
+                                    while (pilUkuran3 < 1 || pilUkuran3 > 5)
+                                    {
+                                        cout << "=================" << endl;
+                                        cout << "  Ukuran sepatu  " << endl;
+                                        cout << "=================" << endl;
+                                        cout << "| 1.| 36        |" << endl;
+                                        cout << "| 2.| 37        |" << endl;
+                                        cout << "| 3.| 39        |" << endl;
+                                        cout << "| 4.| 40        |" << endl;
+                                        cout << "| 5.| 42        |" << endl;
+                                        cout << "=================" << endl;
+                                        cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
+                                        cin >> pilUkuran3;
+                                        switch (pilUkuran3)
+                                        {
+                                        case 1:
+                                            ukuran3 = 36;
+                                            break;
+                                        case 2:
+                                            ukuran3 = 37;
+                                            break;
+                                        case 3:
+                                            ukuran3 = 39;
+                                            break;
+                                        case 4:
+                                            ukuran3 = 40;
+                                            break;
+                                        case 5:
+                                            ukuran3 = 42;
+                                            break;
+                                        default:
+                                            cout << "Ukuran sepatu yang Anda pilih tidak tersedia. Silahkan coba lagi." << endl;
+                                            cout << "Atau hubungi admin (0856-1404-1223)" << endl;
+                                            continue;
+                                        }
+                                    }
+                                    namaSepatu2.ukuran = ukuran3;
                                     break;
                                 case 4:
                                     namaSepatu2.namaSepatu = "AE 1 LOW SHOES";
                                     namaSepatu2.tanggalRilis = "2022-10-10";
-                                    namaSepatu2.ukuran = 42.5;
                                     namaSepatu2.harga = 1500000;
+                                     cout << endl;
+                                    int pilUkuran4, ukuran4;
+                                    while (pilUkuran4 < 1 || pilUkuran4 > 5)
+                                    {
+                                        cout << "=================" << endl;
+                                        cout << "  Ukuran sepatu  " << endl;
+                                        cout << "=================" << endl;
+                                        cout << "| 1.| 36        |" << endl;
+                                        cout << "| 2.| 37        |" << endl;
+                                        cout << "| 3.| 39        |" << endl;
+                                        cout << "| 4.| 40        |" << endl;
+                                        cout << "| 5.| 42        |" << endl;
+                                        cout << "=================" << endl;
+                                        cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
+                                        cin >> pilUkuran4;
+                                        switch (pilUkuran4)
+                                        {
+                                        case 1:
+                                            ukuran4 = 36;
+                                            break;
+                                        case 2:
+                                            ukuran4 = 37;
+                                            break;
+                                        case 3:
+                                            ukuran4 = 39;
+                                            break;
+                                        case 4:
+                                            ukuran4 = 40;
+                                            break;
+                                        case 5:
+                                            ukuran4 = 42;
+                                            break;
+                                        default:
+                                            cout << "Ukuran sepatu yang Anda pilih tidak tersedia. Silahkan coba lagi." << endl;
+                                            cout << "Atau hubungi admin (0856-1404-1223)" << endl;
+                                            continue;
+                                        }
+                                    }
+                                    namaSepatu2.ukuran = ukuran4;
                                     break;
                                 case 5:
                                     namaSepatu2.namaSepatu = "ADIZERO SELECT 2.0 SHOES";
                                     namaSepatu2.tanggalRilis = "2023-02-20";
-                                    namaSepatu2.ukuran = 41;
                                     namaSepatu2.harga = 1900000;
+                                     cout << endl;
+                                    int pilUkuran5, ukuran5;
+                                    while (pilUkuran5 < 1 || pilUkuran5 > 5)
+                                    {
+                                        cout << "=================" << endl;
+                                        cout << "  Ukuran sepatu  " << endl;
+                                        cout << "=================" << endl;
+                                        cout << "| 1.| 36        |" << endl;
+                                        cout << "| 2.| 37        |" << endl;
+                                        cout << "| 3.| 39        |" << endl;
+                                        cout << "| 4.| 40        |" << endl;
+                                        cout << "| 5.| 42        |" << endl;
+                                        cout << "=================" << endl;
+                                        cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
+                                        cin >> pilUkuran5;
+                                        switch (pilUkuran5)
+                                        {
+                                        case 1:
+                                            ukuran5 = 36;
+                                            break;
+                                        case 2:
+                                            ukuran5 = 37;
+                                            break;
+                                        case 3:
+                                            ukuran5 = 39;
+                                            break;
+                                        case 4:
+                                            ukuran5 = 40;
+                                            break;
+                                        case 5:
+                                            ukuran5 = 42;
+                                            break;
+                                        default:
+                                            cout << "Ukuran sepatu yang Anda pilih tidak tersedia. Silahkan coba lagi." << endl;
+                                            cout << "Atau hubungi admin (0856-1404-1223)" << endl;
+                                            continue;
+                                        }
+                                    }
+                                    namaSepatu2.ukuran = ukuran5;
                                     break;
                                 default:
                                     cout << "Pilihan tidak valid" << endl;
@@ -426,38 +844,266 @@ void loginPembeli()
                                 case 1:
                                     namaSepatu3.namaSepatu = "SEPATU SAMBA OG";
                                     namaSepatu3.tanggalRilis = "2023-12-15";
-                                    namaSepatu3.ukuran = 42;
                                     namaSepatu3.harga = 1600000;
+                                    cout << endl;
+                                    int pilUkuran1, ukuran1; 
+                                    while (pilUkuran1 < 1 || pilUkuran1 > 5)
+                                    {
+                                        cout << "=================" << endl;
+                                        cout << "  Ukuran sepatu  " << endl;
+                                        cout << "=================" << endl;
+                                        cout << "| 1.| 36        |" << endl;
+                                        cout << "| 2.| 37        |" << endl;
+                                        cout << "| 3.| 39        |" << endl;
+                                        cout << "| 4.| 40        |" << endl;
+                                        cout << "| 5.| 42        |" << endl;
+                                        cout << "=================" << endl;
+                                        cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
+                                        cin >> pilUkuran1;
+                                        switch (pilUkuran1)
+                                        {
+                                        case 1:
+                                            ukuran1 = 36;
+                                            break;
+                                        case 2:
+                                            ukuran1 = 37;
+                                            break;
+                                        case 3:
+                                            ukuran1 = 39;
+                                            break;
+                                        case 4:
+                                            ukuran1 = 40;
+                                            break;
+                                        case 5:
+                                            ukuran1 = 42;
+                                            break;
+                                        default:
+                                            cout << "Ukuran sepatu yang Anda pilih tidak tersedia. Silahkan coba lagi." << endl;
+                                            cout << "Atau hubungi admin (0856-1404-1223)" << endl;
+                                            continue;
+                                        }
+                                    }
+                                    namaSepatu3.ukuran = ukuran1;
                                     break;
                                 case 2:
                                     namaSepatu3.namaSepatu = "ADIDAS N BAPE";
                                     namaSepatu3.tanggalRilis = "2024-03-21";
-                                    namaSepatu3.ukuran = 43;
                                     namaSepatu3.harga = 1700000;
+                                    cout << endl;
+                                    int pilUkuran2, ukuran2; // Changed variable names to avoid redeclaration
+                                    while (pilUkuran2 < 1 || pilUkuran2 > 5)
+                                    {
+                                        cout << "=================" << endl;
+                                        cout << "  Ukuran sepatu  " << endl;
+                                        cout << "=================" << endl;
+                                        cout << "| 1.| 36        |" << endl;
+                                        cout << "| 2.| 37        |" << endl;
+                                        cout << "| 3.| 39        |" << endl;
+                                        cout << "| 4.| 40        |" << endl;
+                                        cout << "| 5.| 42        |" << endl;
+                                        cout << "=================" << endl;
+                                        cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
+                                        cin >> pilUkuran2;
+                                        switch (pilUkuran2)
+                                        {
+                                        case 1:
+                                            ukuran2 = 36;
+                                            break;
+                                        case 2:
+                                            ukuran2 = 37;
+                                            break;
+                                        case 3:
+                                            ukuran2 = 39;
+                                            break;
+                                        case 4:
+                                            ukuran2 = 40;
+                                            break;
+                                        case 5:
+                                            ukuran2 = 42;
+                                            break;
+                                        default:
+                                            cout << "Ukuran sepatu yang Anda pilih tidak tersedia. Silahkan coba lagi." << endl;
+                                            cout << "Atau hubungi admin (0856-1404-1223)" << endl;
+                                            continue;
+                                        }
+                                    }
+                                    namaSepatu3.ukuran = ukuran2;
                                     break;
                                 case 3:
                                     namaSepatu3.namaSepatu = "GAZELLE LOW TRAINERS";
                                     namaSepatu3.tanggalRilis = "2024-01-05";
-                                    namaSepatu3.ukuran = 44;
                                     namaSepatu3.harga = 1800000;
+                                    cout << endl;
+                                    int pilUkuran3, ukuran3; // Changed variable names to avoid redeclaration
+                                    while (pilUkuran3 < 1 || pilUkuran3 > 5)
+                                    {
+                                        cout << "=================" << endl;
+                                        cout << "  Ukuran sepatu  " << endl;
+                                        cout << "=================" << endl;
+                                        cout << "| 1.| 36        |" << endl;
+                                        cout << "| 2.| 37        |" << endl;
+                                        cout << "| 3.| 39        |" << endl;
+                                        cout << "| 4.| 40        |" << endl;
+                                        cout << "| 5.| 42        |" << endl;
+                                        cout << "=================" << endl;
+                                        cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
+                                        cin >> pilUkuran3;
+                                        switch (pilUkuran3)
+                                        {
+                                        case 1:
+                                            ukuran3 = 36;
+                                            break;
+                                        case 2:
+                                            ukuran3 = 37;
+                                            break;
+                                        case 3:
+                                            ukuran3 = 39;
+                                            break;
+                                        case 4:
+                                            ukuran3 = 40;
+                                            break;
+                                        case 5:
+                                            ukuran3 = 42;
+                                            break;
+                                        default:
+                                            cout << "Ukuran sepatu yang Anda pilih tidak tersedia. Silahkan coba lagi." << endl;
+                                            cout << "Atau hubungi admin (0856-1404-1223)" << endl;
+                                            continue;
+                                        }
+                                    }
+                                    namaSepatu3.ukuran = ukuran3;
                                     break;
                                 case 4:
                                     namaSepatu3.namaSepatu = "SAMBA XYZ SHOEAS";
                                     namaSepatu3.tanggalRilis = "2022-08-10";
-                                    namaSepatu3.ukuran = 42.5;
                                     namaSepatu3.harga = 1500000;
+                                    cout << endl;
+                                    int pilUkuran4, ukuran4; // Changed variable names to avoid redeclaration
+                                    while (pilUkuran4 < 1 || pilUkuran4 > 5)
+                                    {
+                                        cout << "=================" << endl;
+                                        cout << "  Ukuran sepatu  " << endl;
+                                        cout << "=================" << endl;
+                                        cout << "| 1.| 36        |" << endl;
+                                        cout << "| 2.| 37        |" << endl;
+                                        cout << "| 3.| 39        |" << endl;
+                                        cout << "| 4.| 40        |" << endl;
+                                        cout << "| 5.| 42        |" << endl;
+                                        cout << "=================" << endl;
+                                        cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
+                                        cin >> pilUkuran4;
+                                        switch (pilUkuran4)
+                                        {
+                                        case 1:
+                                            ukuran4 = 36;
+                                            break;
+                                        case 2:
+                                            ukuran4 = 37;
+                                            break;
+                                        case 3:
+                                            ukuran4 = 39;
+                                            break;
+                                        case 4:
+                                            ukuran4 = 40;
+                                            break;
+                                        case 5:
+                                            ukuran4 = 42;
+                                            break;
+                                        default:
+                                            cout << "Ukuran sepatu yang Anda pilih tidak tersedia. Silahkan coba lagi." << endl;
+                                            cout << "Atau hubungi admin (0856-1404-1223)" << endl;
+                                            continue;
+                                        }
+                                    }
+                                    namaSepatu3.ukuran = ukuran4;
                                     break;
                                 case 5:
                                     namaSepatu3.namaSepatu = "LONDON SHOES";
                                     namaSepatu3.tanggalRilis = "2021-02-20";
-                                    namaSepatu3.ukuran = 41;
                                     namaSepatu3.harga = 1900000;
+                                    cout << endl;
+                                    int pilUkuran5, ukuran5; // Changed variable names to avoid redeclaration
+                                    while (pilUkuran5 < 1 || pilUkuran5 > 5)
+                                    {
+                                        cout << "=================" << endl;
+                                        cout << "  Ukuran sepatu  " << endl;
+                                        cout << "=================" << endl;
+                                        cout << "| 1.| 36        |" << endl;
+                                        cout << "| 2.| 37        |" << endl;
+                                        cout << "| 3.| 39        |" << endl;
+                                        cout << "| 4.| 40        |" << endl;
+                                        cout << "| 5.| 42        |" << endl;
+                                        cout << "=================" << endl;
+                                        cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
+                                        cin >> pilUkuran5;
+                                        switch (pilUkuran5)
+                                        {
+                                        case 1:
+                                            ukuran5 = 36;
+                                            break;
+                                        case 2:
+                                            ukuran5 = 37;
+                                            break;
+                                        case 3:
+                                            ukuran5 = 39;
+                                            break;
+                                        case 4:
+                                            ukuran5 = 40;
+                                            break;
+                                        case 5:
+                                            ukuran5 = 42;
+                                            break;
+                                        default:
+                                            cout << "Ukuran sepatu yang Anda pilih tidak tersedia. Silahkan coba lagi." << endl;
+                                            cout << "Atau hubungi admin (0856-1404-1223)" << endl;
+                                            continue;
+                                        }
+                                    }
+                                    namaSepatu3.ukuran = ukuran5;
                                     break;
                                 case 6:
                                     namaSepatu3.namaSepatu = "SL 72 RS SHOES";
                                     namaSepatu3.tanggalRilis = "2024-02-30";
-                                    namaSepatu3.ukuran = 41;
                                     namaSepatu3.harga = 1900000;
+                                    cout << endl;
+                                    int pilUkuran6, ukuran6; // Changed variable names to avoid redeclaration
+                                    while (pilUkuran6 < 1 || pilUkuran6 > 5)
+                                    {
+                                        cout << "=================" << endl;
+                                        cout << "  Ukuran sepatu  " << endl;
+                                        cout << "=================" << endl;
+                                        cout << "| 1.| 36        |" << endl;
+                                        cout << "| 2.| 37        |" << endl;
+                                        cout << "| 3.| 39        |" << endl;
+                                        cout << "| 4.| 40        |" << endl;
+                                        cout << "| 5.| 42        |" << endl;
+                                        cout << "=================" << endl;
+                                        cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
+                                        cin >> pilUkuran6;
+                                        switch (pilUkuran6)
+                                        {
+                                        case 1:
+                                            ukuran6 = 36;
+                                            break;
+                                        case 2:
+                                            ukuran6 = 37;
+                                            break;
+                                        case 3:
+                                            ukuran6 = 39;
+                                            break;
+                                        case 4:
+                                            ukuran6 = 40;
+                                            break;
+                                        case 5:
+                                            ukuran6 = 42;
+                                            break;
+                                        default:
+                                            cout << "Ukuran sepatu yang Anda pilih tidak tersedia. Silahkan coba lagi." << endl;
+                                            cout << "Atau hubungi admin (0856-1404-1223)" << endl;
+                                            continue;
+                                        }
+                                    }
+                                    namaSepatu3.ukuran = ukuran6;
                                     break;
                                 default:
                                     cout << "Pilihan tidak valid" << endl;
@@ -480,19 +1126,12 @@ void loginPembeli()
                             cout << "| 3. |SAMBA XLG SHOES          |" << endl;
                             cout << "| 4. |LONDON SHOES             |" << endl;
                             cout << "| 5. |GAZELLE 85 SHOES         |" << endl;
-                            cout << "| 6. |GAZELLE LOW TRAINERS     |" << endl;
-                            cout << "| 7. |SL 72 RS SHOES           |" << endl;
-                            cout << "| 8. |HANDBALL SPEZIAL SHOES   |" << endl;
-                            cout << "| 9. |CAMPUS 00S               |" << endl;
-                            cout << "| 10.|NMD_R1 SHOES             |" << endl;
-                            cout << "| 11.|COUNTRY XLG SHOES        |" << endl;
-                            cout << "| 12.|OZMILLEN                 |" << endl;
                             cout << "================================" << endl;
                             do
                             {
-                                cout << "Pilih Sepatu Anda (1/2/3/4/5/6/7/8/9/10/11/12): ";
+                                cout << "Pilih Sepatu Anda (1/2/3/4/5): ";
                                 cin >> keempat;
-                                if (keempat < 1 || keempat > 12)
+                                if (keempat < 1 || keempat > 5)
                                 {
                                     cout << "Pilihan tidak valid, keluar dari menu sepatu." << endl;
                                     break;
@@ -503,74 +1142,222 @@ void loginPembeli()
                                 case 1:
                                     namaSepatu4.namaSepatu = "SEPATU SAMBA OG";
                                     namaSepatu4.tanggalRilis = "2023-12-14";
-                                    namaSepatu4.ukuran = 42;
                                     namaSepatu4.harga = 2200000;
+                                     cout << endl;
+                                    int pilUkuran1, ukuran1;
+                                    while (pilUkuran1 < 1 || pilUkuran1 > 5)
+                                    {
+                                        cout << "=================" << endl;
+                                        cout << "  Ukuran sepatu  " << endl;
+                                        cout << "=================" << endl;
+                                        cout << "| 1.| 36        |" << endl;
+                                        cout << "| 2.| 37        |" << endl;
+                                        cout << "| 3.| 39        |" << endl;
+                                        cout << "| 4.| 40        |" << endl;
+                                        cout << "| 5.| 42        |" << endl;
+                                        cout << "=================" << endl;
+                                        cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
+                                        cin >> pilUkuran1;
+                                        switch (pilUkuran1)
+                                        {
+                                        case 1:
+                                            ukuran1 = 36;
+                                            break;
+                                        case 2:
+                                            ukuran1 = 37;
+                                            break;
+                                        case 3:
+                                            ukuran1 = 39;
+                                            break;
+                                        case 4:
+                                            ukuran1 = 40;
+                                            break;
+                                        case 5:
+                                            ukuran1 = 42;
+                                            break;
+                                        default:
+                                            cout << "Ukuran sepatu yang Anda pilih tidak tersedia. Silahkan coba lagi." << endl;
+                                            cout << "Atau hubungi admin (0856-1404-1223)" << endl;
+                                            continue;
+                                        }
+                                    }
+                                    namaSepatu4.ukuran = ukuran1;
                                     break;
                                 case 2:
                                     namaSepatu4.namaSepatu = "ABIBAS_N_BAPE";
                                     namaSepatu4.tanggalRilis = "2024-02-22";
-                                    namaSepatu4.ukuran = 43;
                                     namaSepatu4.harga = 2300000;
+                                     cout << endl;
+                                    int pilUkuran2, ukuran2;
+                                    while (pilUkuran2 < 1 || pilUkuran2 > 5)
+                                    {
+                                        cout << "=================" << endl;
+                                        cout << "  Ukuran sepatu  " << endl;
+                                        cout << "=================" << endl;
+                                        cout << "| 1.| 36        |" << endl;
+                                        cout << "| 2.| 37        |" << endl;
+                                        cout << "| 3.| 39        |" << endl;
+                                        cout << "| 4.| 40        |" << endl;
+                                        cout << "| 5.| 42        |" << endl;
+                                        cout << "=================" << endl;
+                                        cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
+                                        cin >> pilUkuran2;
+                                        switch (pilUkuran2)
+                                        {
+                                        case 1:
+                                            ukuran2 = 36;
+                                            break;
+                                        case 2:
+                                            ukuran2 = 37;
+                                            break;
+                                        case 3:
+                                            ukuran2 = 39;
+                                            break;
+                                        case 4:
+                                            ukuran2 = 40;
+                                            break;
+                                        case 5:
+                                            ukuran2 = 42;
+                                            break;
+                                        default:
+                                            cout << "Ukuran sepatu yang Anda pilih tidak tersedia. Silahkan coba lagi." << endl;
+                                            cout << "Atau hubungi admin (0856-1404-1223)" << endl;
+                                            continue;
+                                        }
+                                    }
+                                    namaSepatu4.ukuran = ukuran2;
                                     break;
                                 case 3:
                                     namaSepatu4.namaSepatu = "SAMBA XLG SHOES";
                                     namaSepatu4.tanggalRilis = "2024-01-05";
-                                    namaSepatu4.ukuran = 44;
                                     namaSepatu4.harga = 2400000;
+                                     cout << endl;
+                                    int pilUkuran3, ukuran3;
+                                    while (pilUkuran3 < 1 || pilUkuran3 > 5)
+                                    {
+                                        cout << "=================" << endl;
+                                        cout << "  Ukuran sepatu  " << endl;
+                                        cout << "=================" << endl;
+                                        cout << "| 1.| 36        |" << endl;
+                                        cout << "| 2.| 37        |" << endl;
+                                        cout << "| 3.| 39        |" << endl;
+                                        cout << "| 4.| 40        |" << endl;
+                                        cout << "| 5.| 42        |" << endl;
+                                        cout << "=================" << endl;
+                                        cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
+                                        cin >> pilUkuran3;
+                                        switch (pilUkuran3)
+                                        {
+                                        case 1:
+                                            ukuran3 = 36;
+                                            break;
+                                        case 2:
+                                            ukuran3 = 37;
+                                            break;
+                                        case 3:
+                                            ukuran3 = 39;
+                                            break;
+                                        case 4:
+                                            ukuran3 = 40;
+                                            break;
+                                        case 5:
+                                            ukuran3 = 42;
+                                            break;
+                                        default:
+                                            cout << "Ukuran sepatu yang Anda pilih tidak tersedia. Silahkan coba lagi." << endl;
+                                            cout << "Atau hubungi admin (0856-1404-1223)" << endl;
+                                            continue;
+                                        }
+                                    }
+                                    namaSepatu4.ukuran = ukuran3;
                                     break;
                                 case 4:
                                     namaSepatu4.namaSepatu = "LONDON SHOES";
                                     namaSepatu4.tanggalRilis = "2024-01-10";
-                                    namaSepatu4.ukuran = 42.5;
                                     namaSepatu4.harga = 2200000;
+                                    cout << endl;
+                                    int pilUkuran4, ukuran4;
+                                    while (pilUkuran4 < 1 || pilUkuran4 > 5)
+                                    {
+                                        cout << "=================" << endl;
+                                        cout << "  Ukuran sepatu  " << endl;
+                                        cout << "=================" << endl;
+                                        cout << "| 1.| 36        |" << endl;
+                                        cout << "| 2.| 37        |" << endl;
+                                        cout << "| 3.| 39        |" << endl;
+                                        cout << "| 4.| 40        |" << endl;
+                                        cout << "| 5.| 42        |" << endl;
+                                        cout << "=================" << endl;
+                                        cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
+                                        cin >> pilUkuran4;
+                                        switch (pilUkuran4)
+                                        {
+                                        case 1:
+                                            ukuran4 = 36;
+                                            break;
+                                        case 2:
+                                            ukuran4 = 37;
+                                            break;
+                                        case 3:
+                                            ukuran4 = 39;
+                                            break;
+                                        case 4:
+                                            ukuran4 = 40;
+                                            break;
+                                        case 5:
+                                            ukuran4 = 42;
+                                            break;
+                                        default:
+                                            cout << "Ukuran sepatu yang Anda pilih tidak tersedia. Silahkan coba lagi." << endl;
+                                            cout << "Atau hubungi admin (0856-1404-1223)" << endl;
+                                            continue;
+                                        }
+                                    }
+                                    namaSepatu4.ukuran = ukuran4;
                                     break;
                                 case 5:
                                     namaSepatu4.namaSepatu = "GAZELLE 85 SHOES";
                                     namaSepatu4.tanggalRilis = "2024-02-20";
-                                    namaSepatu4.ukuran = 41;
-                                    namaSepatu4.harga = 2000000;
-                                    break;
-                                case 6:
-                                    namaSepatu4.namaSepatu = "GAZELLE LOW TRAINERS";
-                                    namaSepatu4.tanggalRilis = "2024-02-27";
-                                    namaSepatu4.ukuran = 41;
-                                    namaSepatu4.harga = 2000000;
-                                    break;
-                                case 7:
-                                    namaSepatu4.namaSepatu = "SL 72 RS SHOES";
-                                    namaSepatu4.tanggalRilis = "2024-02-20";
-                                    namaSepatu4.ukuran = 41;
-                                    namaSepatu4.harga = 1600000;
-                                    break;
-                                case 8:
-                                    namaSepatu4.namaSepatu = "HANDBALL SPEZIAL SHOES";
-                                    namaSepatu4.tanggalRilis = "2024-01-22";
-                                    namaSepatu4.ukuran = 41;
-                                    namaSepatu4.harga = 1700000;
-                                    break;
-                                case 9:
-                                    namaSepatu4.namaSepatu = "CAMPUS 00S";
-                                    namaSepatu4.tanggalRilis = "2023-03-22";
-                                    namaSepatu4.ukuran = 41;
-                                    namaSepatu4.harga = 2200000;
-                                    break;
-                                case 10:
-                                    namaSepatu4.namaSepatu = "NMD_R1 SHOES";
-                                    namaSepatu4.tanggalRilis = "2024-03-02";
-                                    namaSepatu4.ukuran = 41;
-                                    namaSepatu4.harga = 2300000;
-                                    break;
-                                case 11:
-                                    namaSepatu4.namaSepatu = "COUNTRY XLG SHOES";
-                                    namaSepatu4.tanggalRilis = "2023-12-12";
-                                    namaSepatu4.ukuran = 41;
-                                    namaSepatu4.harga = 1700000;
-                                    break;
-                                case 12:
-                                    namaSepatu4.namaSepatu = "OZMILLEN";
-                                    namaSepatu4.tanggalRilis = "2023-11-14";
-                                    namaSepatu4.ukuran = 41;
-                                    namaSepatu4.harga = 1700000;
+                                    namaSepatu4.harga = 1200000;
+                                    cout << endl;
+                                    int pilUkuran5, ukuran5;
+                                    while (pilUkuran5 < 1 || pilUkuran5 > 5)
+                                    {
+                                        cout << "=================" << endl;
+                                        cout << "  Ukuran sepatu  " << endl;
+                                        cout << "=================" << endl;
+                                        cout << "| 1.| 36        |" << endl;
+                                        cout << "| 2.| 37        |" << endl;
+                                        cout << "| 3.| 39        |" << endl;
+                                        cout << "| 4.| 40        |" << endl;
+                                        cout << "| 5.| 42        |" << endl;
+                                        cout << "=================" << endl;
+                                        cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
+                                        cin >> pilUkuran5;
+                                        switch (pilUkuran5)
+                                        {
+                                        case 1:
+                                            ukuran5 = 36;
+                                            break;
+                                        case 2:
+                                            ukuran5 = 37;
+                                            break;
+                                        case 3:
+                                            ukuran5 = 39;
+                                            break;
+                                        case 4:
+                                            ukuran5 = 40;
+                                            break;
+                                        case 5:
+                                            ukuran5 = 42;
+                                            break;
+                                        default:
+                                            cout << "Ukuran sepatu yang Anda pilih tidak tersedia. Silahkan coba lagi." << endl;
+                                            cout << "Atau hubungi admin (0856-1404-1223)" << endl;
+                                            continue;
+                                        }
+                                    }
+                                    namaSepatu4.ukuran = ukuran5;
                                     break;
                                 default:
                                     cout << "Pilihan tidak valid" << endl;
