@@ -79,6 +79,19 @@ void popBarang()
     }
 }
 
+void popSemuaBarang()
+{
+    if (barangBelanjaKosong())
+    {
+        cout << "Belum Ada Barang Yang Anda Beli" << endl;
+    }
+    else
+    {
+        cout << "Semua Barang Berhasil Di Cancel" << endl;
+        sepatu.tempat = -1; // Reset indeks
+    }
+}
+
 void tampilanPembelian()
 {
     if (barangBelanjaKosong() == true)
@@ -149,14 +162,15 @@ void loginPembeli()
 
             do
             {
-                cout << "====================================" << endl;
-                cout << "|           MENU PEMBELI            |" << endl;
-                cout << "| 1.| List Sepatu Tersedia          |" << endl;
-                cout << "| 2.| Pembatalan pembelian          |" << endl;
-                cout << "| 3.| Rekapan Pembelian             |" << endl;
-                cout << "| 4.| Pembayaran                    |" << endl;
-                cout << "| 0.| Keluar                        |" << endl;
-                cout << "====================================" << endl;
+                cout << "======================================================" << endl;
+                cout << "|           MENU PEMBELI                             |" << endl;
+                cout << "| 1.| List Sepatu Tersedia                           |" << endl;
+                cout << "| 2.| Hapus sepatu terakhir yang dimasukkan          |" << endl;
+                cout << "| 3.| Pembatalan pembelian                           |" << endl;
+                cout << "| 4.| Rekapan Pembelian                              |" << endl;
+                cout << "| 5.| Pembayaran                                     |" << endl;
+                cout << "| 0.| Keluar                                         |" << endl;
+                cout << "======================================================" << endl;
                 cout << "Silahkan masukkan pilihan anda: ";
                 cin >> pilih;
                 cout << endl;
@@ -1201,9 +1215,12 @@ void loginPembeli()
                     popBarang();
                     break;
                 case 3:
-                    listSepatu();
+                    popSemuaBarang();
                     break;
                 case 4:
+                    listSepatu();
+                    break;
+                case 5:
                     cout << "=========================" << endl;
                     cout << "     Menu Pembayaran     " << endl;
                     cout << "=========================" << endl;
