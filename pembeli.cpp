@@ -1145,7 +1145,7 @@ void loginPembeli()
                                     namaSepatu4.harga = 2200000;
                                      cout << endl;
                                     int pilUkuran1, ukuran1;
-                                    while (pilUkuran1 < 1 || pilUkuran1 > 5)
+                                    do
                                     {
                                         cout << "=================" << endl;
                                         cout << "  Ukuran sepatu  " << endl;
@@ -1180,7 +1180,7 @@ void loginPembeli()
                                             cout << "Atau hubungi admin (0856-1404-1223)" << endl;
                                             continue;
                                         }
-                                    }
+                                    } while (pilUkuran1 < 1 || pilUkuran1 > 5);
                                     namaSepatu4.ukuran = ukuran1;
                                     break;
                                 case 2:
