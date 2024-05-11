@@ -94,6 +94,19 @@ void tampilanPembelian()
     }
 }
 
+void ukuranSepatu(){
+    cout << "=================" << endl;
+    cout << "  Ukuran sepatu  " << endl;
+    cout << "=================" << endl;
+    cout << "| 1.| 36        |" << endl;
+    cout << "| 2.| 37        |" << endl;
+    cout << "| 3.| 39        |" << endl;
+    cout << "| 4.| 40        |" << endl;
+    cout << "| 5.| 42        |" << endl;
+    cout << "=================" << endl;
+}
+
+
 void loginPembeli()
 {
     string username, password, usernameLogin, passwordLogin;
@@ -207,15 +220,7 @@ void loginPembeli()
                                     int pilUkuran1, ukuran1;
                                     while (pilUkuran1 < 1 || pilUkuran1 > 5)
                                     {
-                                        cout << "=================" << endl;
-                                        cout << "  Ukuran sepatu  " << endl;
-                                        cout << "=================" << endl;
-                                        cout << "| 1.| 36        |" << endl;
-                                        cout << "| 2.| 37        |" << endl;
-                                        cout << "| 3.| 39        |" << endl;
-                                        cout << "| 4.| 40        |" << endl;
-                                        cout << "| 5.| 42        |" << endl;
-                                        cout << "=================" << endl;
+                                        ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
                                         cin >> pilUkuran1;
                                         switch (pilUkuran1)
@@ -251,15 +256,7 @@ void loginPembeli()
                                     int pilih_ukuran2, ukuran_kedua;
                                     do
                                     {
-                                        cout << "=================" << endl;
-                                        cout << "  Ukuran sepatu  " << endl;
-                                        cout << "=================" << endl;
-                                        cout << "| 1.| 36        |" << endl;
-                                        cout << "| 2.| 37        |" << endl;
-                                        cout << "| 3.| 39        |" << endl;
-                                        cout << "| 4.| 40        |" << endl;
-                                        cout << "| 5.| 42        |" << endl;
-                                        cout << "=================" << endl;
+                                        ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
                                         cin >> pilih_ukuran2;
                                         switch (pilih_ukuran2)
@@ -295,15 +292,7 @@ void loginPembeli()
                                     int pilUkuran3, ukuran3;
                                     do
                                     {
-                                        cout << "=================" << endl;
-                                        cout << "  Ukuran sepatu  " << endl;
-                                        cout << "=================" << endl;
-                                        cout << "| 1.| 36        |" << endl;
-                                        cout << "| 2.| 37        |" << endl;
-                                        cout << "| 3.| 39        |" << endl;
-                                        cout << "| 4.| 40        |" << endl;
-                                        cout << "| 5.| 42        |" << endl;
-                                        cout << "=================" << endl;
+                                        ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
                                         cin >> pilUkuran3;
                                         switch (pilUkuran3)
@@ -339,15 +328,7 @@ void loginPembeli()
                                     int pilUkuran4, ukuran4;
                                     while (pilUkuran4 < 1 || pilUkuran4 > 5)
                                     {
-                                        cout << "=================" << endl;
-                                        cout << "  Ukuran sepatu  " << endl;
-                                        cout << "=================" << endl;
-                                        cout << "| 1.| 36        |" << endl;
-                                        cout << "| 2.| 37        |" << endl;
-                                        cout << "| 3.| 39        |" << endl;
-                                        cout << "| 4.| 40        |" << endl;
-                                        cout << "| 5.| 42        |" << endl;
-                                        cout << "=================" << endl;
+                                        ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
                                         cin >> pilUkuran4;
                                         switch (pilUkuran4)
@@ -383,15 +364,7 @@ void loginPembeli()
                                     int pilUkuran5, ukuran5;
                                     while (pilUkuran5 < 1 || pilUkuran5 > 5)
                                     {
-                                        cout << "=================" << endl;
-                                        cout << "  Ukuran sepatu  " << endl;
-                                        cout << "=================" << endl;
-                                        cout << "| 1.| 36        |" << endl;
-                                        cout << "| 2.| 37        |" << endl;
-                                        cout << "| 3.| 39        |" << endl;
-                                        cout << "| 4.| 40        |" << endl;
-                                        cout << "| 5.| 42        |" << endl;
-                                        cout << "=================" << endl;
+                                        ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
                                         cin >> pilUkuran5;
                                         switch (pilUkuran5)
@@ -427,15 +400,7 @@ void loginPembeli()
                                     int pilUkuran6, ukuran6;
                                     while (pilUkuran6 < 1 || pilUkuran6 > 5)
                                     {
-                                        cout << "=================" << endl;
-                                        cout << "  Ukuran sepatu  " << endl;
-                                        cout << "=================" << endl;
-                                        cout << "| 1.| 36        |" << endl;
-                                        cout << "| 2.| 37        |" << endl;
-                                        cout << "| 3.| 39        |" << endl;
-                                        cout << "| 4.| 40        |" << endl;
-                                        cout << "| 5.| 42        |" << endl;
-                                        cout << "=================" << endl;
+                                        ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
                                         cin >> pilUkuran6;
                                         switch (pilUkuran6)
@@ -471,15 +436,7 @@ void loginPembeli()
                                     int pilUkuran7, ukuran7;
                                     do
                                     {
-                                        cout << "=================" << endl;
-                                        cout << "  Ukuran sepatu  " << endl;
-                                        cout << "=================" << endl;
-                                        cout << "| 1.| 36        |" << endl;
-                                        cout << "| 2.| 37        |" << endl;
-                                        cout << "| 3.| 39        |" << endl;
-                                        cout << "| 4.| 40        |" << endl;
-                                        cout << "| 5.| 42        |" << endl;
-                                        cout << "=================" << endl;
+                                        ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
                                         cin >> pilUkuran7;
                                         switch (pilUkuran7)
@@ -516,15 +473,7 @@ void loginPembeli()
                                     int pilUkuran8, ukuran8;
                                     while (pilUkuran8 < 1 || pilUkuran8 > 5)
                                     {
-                                        cout << "=================" << endl;
-                                        cout << "  Ukuran sepatu  " << endl;
-                                        cout << "=================" << endl;
-                                        cout << "| 1.| 36        |" << endl;
-                                        cout << "| 2.| 37        |" << endl;
-                                        cout << "| 3.| 39        |" << endl;
-                                        cout << "| 4.| 40        |" << endl;
-                                        cout << "| 5.| 42        |" << endl;
-                                        cout << "=================" << endl;
+                                        ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
                                         cin >> pilUkuran8;
                                         switch (pilUkuran8)
@@ -594,15 +543,7 @@ void loginPembeli()
                                     int pilUkuran1, ukuran1;
                                     while (pilUkuran1 < 1 || pilUkuran1 > 5)
                                     {
-                                        cout << "=================" << endl;
-                                        cout << "  Ukuran sepatu  " << endl;
-                                        cout << "=================" << endl;
-                                        cout << "| 1.| 36        |" << endl;
-                                        cout << "| 2.| 37        |" << endl;
-                                        cout << "| 3.| 39        |" << endl;
-                                        cout << "| 4.| 40        |" << endl;
-                                        cout << "| 5.| 42        |" << endl;
-                                        cout << "=================" << endl;
+                                        ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
                                         cin >> pilUkuran1;
                                         switch (pilUkuran1)
@@ -638,15 +579,7 @@ void loginPembeli()
                                     int pilUkuran2, ukuran2;
                                     while (pilUkuran2 < 1 || pilUkuran2 > 5)
                                     {
-                                        cout << "=================" << endl;
-                                        cout << "  Ukuran sepatu  " << endl;
-                                        cout << "=================" << endl;
-                                        cout << "| 1.| 36        |" << endl;
-                                        cout << "| 2.| 37        |" << endl;
-                                        cout << "| 3.| 39        |" << endl;
-                                        cout << "| 4.| 40        |" << endl;
-                                        cout << "| 5.| 42        |" << endl;
-                                        cout << "=================" << endl;
+                                        ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
                                         cin >> pilUkuran2;
                                         switch (pilUkuran2)
@@ -682,15 +615,7 @@ void loginPembeli()
                                     int pilUkuran3, ukuran3;
                                     while (pilUkuran3 < 1 || pilUkuran3 > 5)
                                     {
-                                        cout << "=================" << endl;
-                                        cout << "  Ukuran sepatu  " << endl;
-                                        cout << "=================" << endl;
-                                        cout << "| 1.| 36        |" << endl;
-                                        cout << "| 2.| 37        |" << endl;
-                                        cout << "| 3.| 39        |" << endl;
-                                        cout << "| 4.| 40        |" << endl;
-                                        cout << "| 5.| 42        |" << endl;
-                                        cout << "=================" << endl;
+                                        ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
                                         cin >> pilUkuran3;
                                         switch (pilUkuran3)
@@ -726,15 +651,7 @@ void loginPembeli()
                                     int pilUkuran4, ukuran4;
                                     while (pilUkuran4 < 1 || pilUkuran4 > 5)
                                     {
-                                        cout << "=================" << endl;
-                                        cout << "  Ukuran sepatu  " << endl;
-                                        cout << "=================" << endl;
-                                        cout << "| 1.| 36        |" << endl;
-                                        cout << "| 2.| 37        |" << endl;
-                                        cout << "| 3.| 39        |" << endl;
-                                        cout << "| 4.| 40        |" << endl;
-                                        cout << "| 5.| 42        |" << endl;
-                                        cout << "=================" << endl;
+                                        ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
                                         cin >> pilUkuran4;
                                         switch (pilUkuran4)
@@ -770,15 +687,7 @@ void loginPembeli()
                                     int pilUkuran5, ukuran5;
                                     while (pilUkuran5 < 1 || pilUkuran5 > 5)
                                     {
-                                        cout << "=================" << endl;
-                                        cout << "  Ukuran sepatu  " << endl;
-                                        cout << "=================" << endl;
-                                        cout << "| 1.| 36        |" << endl;
-                                        cout << "| 2.| 37        |" << endl;
-                                        cout << "| 3.| 39        |" << endl;
-                                        cout << "| 4.| 40        |" << endl;
-                                        cout << "| 5.| 42        |" << endl;
-                                        cout << "=================" << endl;
+                                        ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
                                         cin >> pilUkuran5;
                                         switch (pilUkuran5)
@@ -849,15 +758,7 @@ void loginPembeli()
                                     int pilUkuran1, ukuran1; 
                                     while (pilUkuran1 < 1 || pilUkuran1 > 5)
                                     {
-                                        cout << "=================" << endl;
-                                        cout << "  Ukuran sepatu  " << endl;
-                                        cout << "=================" << endl;
-                                        cout << "| 1.| 36        |" << endl;
-                                        cout << "| 2.| 37        |" << endl;
-                                        cout << "| 3.| 39        |" << endl;
-                                        cout << "| 4.| 40        |" << endl;
-                                        cout << "| 5.| 42        |" << endl;
-                                        cout << "=================" << endl;
+                                        ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
                                         cin >> pilUkuran1;
                                         switch (pilUkuran1)
@@ -893,15 +794,7 @@ void loginPembeli()
                                     int pilUkuran2, ukuran2; // Changed variable names to avoid redeclaration
                                     while (pilUkuran2 < 1 || pilUkuran2 > 5)
                                     {
-                                        cout << "=================" << endl;
-                                        cout << "  Ukuran sepatu  " << endl;
-                                        cout << "=================" << endl;
-                                        cout << "| 1.| 36        |" << endl;
-                                        cout << "| 2.| 37        |" << endl;
-                                        cout << "| 3.| 39        |" << endl;
-                                        cout << "| 4.| 40        |" << endl;
-                                        cout << "| 5.| 42        |" << endl;
-                                        cout << "=================" << endl;
+                                        ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
                                         cin >> pilUkuran2;
                                         switch (pilUkuran2)
@@ -937,15 +830,7 @@ void loginPembeli()
                                     int pilUkuran3, ukuran3; // Changed variable names to avoid redeclaration
                                     while (pilUkuran3 < 1 || pilUkuran3 > 5)
                                     {
-                                        cout << "=================" << endl;
-                                        cout << "  Ukuran sepatu  " << endl;
-                                        cout << "=================" << endl;
-                                        cout << "| 1.| 36        |" << endl;
-                                        cout << "| 2.| 37        |" << endl;
-                                        cout << "| 3.| 39        |" << endl;
-                                        cout << "| 4.| 40        |" << endl;
-                                        cout << "| 5.| 42        |" << endl;
-                                        cout << "=================" << endl;
+                                        ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
                                         cin >> pilUkuran3;
                                         switch (pilUkuran3)
@@ -981,15 +866,7 @@ void loginPembeli()
                                     int pilUkuran4, ukuran4; // Changed variable names to avoid redeclaration
                                     while (pilUkuran4 < 1 || pilUkuran4 > 5)
                                     {
-                                        cout << "=================" << endl;
-                                        cout << "  Ukuran sepatu  " << endl;
-                                        cout << "=================" << endl;
-                                        cout << "| 1.| 36        |" << endl;
-                                        cout << "| 2.| 37        |" << endl;
-                                        cout << "| 3.| 39        |" << endl;
-                                        cout << "| 4.| 40        |" << endl;
-                                        cout << "| 5.| 42        |" << endl;
-                                        cout << "=================" << endl;
+                                        ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
                                         cin >> pilUkuran4;
                                         switch (pilUkuran4)
@@ -1025,15 +902,7 @@ void loginPembeli()
                                     int pilUkuran5, ukuran5; // Changed variable names to avoid redeclaration
                                     while (pilUkuran5 < 1 || pilUkuran5 > 5)
                                     {
-                                        cout << "=================" << endl;
-                                        cout << "  Ukuran sepatu  " << endl;
-                                        cout << "=================" << endl;
-                                        cout << "| 1.| 36        |" << endl;
-                                        cout << "| 2.| 37        |" << endl;
-                                        cout << "| 3.| 39        |" << endl;
-                                        cout << "| 4.| 40        |" << endl;
-                                        cout << "| 5.| 42        |" << endl;
-                                        cout << "=================" << endl;
+                                        ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
                                         cin >> pilUkuran5;
                                         switch (pilUkuran5)
@@ -1069,15 +938,7 @@ void loginPembeli()
                                     int pilUkuran6, ukuran6; // Changed variable names to avoid redeclaration
                                     while (pilUkuran6 < 1 || pilUkuran6 > 5)
                                     {
-                                        cout << "=================" << endl;
-                                        cout << "  Ukuran sepatu  " << endl;
-                                        cout << "=================" << endl;
-                                        cout << "| 1.| 36        |" << endl;
-                                        cout << "| 2.| 37        |" << endl;
-                                        cout << "| 3.| 39        |" << endl;
-                                        cout << "| 4.| 40        |" << endl;
-                                        cout << "| 5.| 42        |" << endl;
-                                        cout << "=================" << endl;
+                                        ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
                                         cin >> pilUkuran6;
                                         switch (pilUkuran6)
@@ -1147,15 +1008,7 @@ void loginPembeli()
                                     int pilUkuran1, ukuran1;
                                     do
                                     {
-                                        cout << "=================" << endl;
-                                        cout << "  Ukuran sepatu  " << endl;
-                                        cout << "=================" << endl;
-                                        cout << "| 1.| 36        |" << endl;
-                                        cout << "| 2.| 37        |" << endl;
-                                        cout << "| 3.| 39        |" << endl;
-                                        cout << "| 4.| 40        |" << endl;
-                                        cout << "| 5.| 42        |" << endl;
-                                        cout << "=================" << endl;
+                                        ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
                                         cin >> pilUkuran1;
                                         switch (pilUkuran1)
@@ -1191,15 +1044,7 @@ void loginPembeli()
                                     int pilUkuran2, ukuran2;
                                     while (pilUkuran2 < 1 || pilUkuran2 > 5)
                                     {
-                                        cout << "=================" << endl;
-                                        cout << "  Ukuran sepatu  " << endl;
-                                        cout << "=================" << endl;
-                                        cout << "| 1.| 36        |" << endl;
-                                        cout << "| 2.| 37        |" << endl;
-                                        cout << "| 3.| 39        |" << endl;
-                                        cout << "| 4.| 40        |" << endl;
-                                        cout << "| 5.| 42        |" << endl;
-                                        cout << "=================" << endl;
+                                        ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
                                         cin >> pilUkuran2;
                                         switch (pilUkuran2)
@@ -1235,15 +1080,7 @@ void loginPembeli()
                                     int pilUkuran3, ukuran3;
                                     while (pilUkuran3 < 1 || pilUkuran3 > 5)
                                     {
-                                        cout << "=================" << endl;
-                                        cout << "  Ukuran sepatu  " << endl;
-                                        cout << "=================" << endl;
-                                        cout << "| 1.| 36        |" << endl;
-                                        cout << "| 2.| 37        |" << endl;
-                                        cout << "| 3.| 39        |" << endl;
-                                        cout << "| 4.| 40        |" << endl;
-                                        cout << "| 5.| 42        |" << endl;
-                                        cout << "=================" << endl;
+                                        ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
                                         cin >> pilUkuran3;
                                         switch (pilUkuran3)
@@ -1279,15 +1116,7 @@ void loginPembeli()
                                     int pilUkuran4, ukuran4;
                                     while (pilUkuran4 < 1 || pilUkuran4 > 5)
                                     {
-                                        cout << "=================" << endl;
-                                        cout << "  Ukuran sepatu  " << endl;
-                                        cout << "=================" << endl;
-                                        cout << "| 1.| 36        |" << endl;
-                                        cout << "| 2.| 37        |" << endl;
-                                        cout << "| 3.| 39        |" << endl;
-                                        cout << "| 4.| 40        |" << endl;
-                                        cout << "| 5.| 42        |" << endl;
-                                        cout << "=================" << endl;
+                                        ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
                                         cin >> pilUkuran4;
                                         switch (pilUkuran4)
@@ -1323,15 +1152,7 @@ void loginPembeli()
                                     int pilUkuran5, ukuran5;
                                     while (pilUkuran5 < 1 || pilUkuran5 > 5)
                                     {
-                                        cout << "=================" << endl;
-                                        cout << "  Ukuran sepatu  " << endl;
-                                        cout << "=================" << endl;
-                                        cout << "| 1.| 36        |" << endl;
-                                        cout << "| 2.| 37        |" << endl;
-                                        cout << "| 3.| 39        |" << endl;
-                                        cout << "| 4.| 40        |" << endl;
-                                        cout << "| 5.| 42        |" << endl;
-                                        cout << "=================" << endl;
+                                        ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
                                         cin >> pilUkuran5;
                                         switch (pilUkuran5)
