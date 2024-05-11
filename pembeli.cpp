@@ -248,8 +248,8 @@ void loginPembeli()
                                     namaSepatu1.tanggalRilis = "2024-01-20";
                                     namaSepatu1.harga = 1800000;
                                     cout << endl;
-                                    int pilUkuran2, ukuran2;
-                                    while (pilUkuran2 < 1 || pilUkuran2 > 5)
+                                    int pilih_ukuran2, ukuran_kedua;
+                                    do
                                     {
                                         cout << "=================" << endl;
                                         cout << "  Ukuran sepatu  " << endl;
@@ -261,31 +261,31 @@ void loginPembeli()
                                         cout << "| 5.| 42        |" << endl;
                                         cout << "=================" << endl;
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
-                                        cin >> pilUkuran2;
-                                        switch (pilUkuran2)
+                                        cin >> pilih_ukuran2;
+                                        switch (pilih_ukuran2)
                                         {
                                         case 1:
-                                            ukuran2 = 36;
+                                            ukuran_kedua = 36;
                                             break;
                                         case 2:
-                                            ukuran2 = 37;
+                                            ukuran_kedua = 37;
                                             break;
                                         case 3:
-                                            ukuran2 = 39;
+                                            ukuran_kedua = 39;
                                             break;
                                         case 4:
-                                            ukuran2 = 40;
+                                            ukuran_kedua = 40;
                                             break;
                                         case 5:
-                                            ukuran2 = 42;
+                                            ukuran_kedua = 42;
                                             break;
                                         default:
                                             cout << "Ukuran sepatu yang Anda pilih tidak tersedia. Silahkan coba lagi." << endl;
                                             cout << "Atau hubungi admin (0856-1404-1223)" << endl;
                                             continue;
                                         }
-                                    }
-                                    namaSepatu1.ukuran = ukuran2;
+                                    } while (pilih_ukuran2 < 1 || pilih_ukuran2 > 5);
+                                    namaSepatu1.ukuran = ukuran_kedua;
                                     break;
                                 case 3:
                                     namaSepatu1.namaSepatu = "X CRAZYFAST ELITE FIRM";
@@ -293,7 +293,7 @@ void loginPembeli()
                                     namaSepatu1.harga = 2200000;
                                     cout << endl;
                                     int pilUkuran3, ukuran3;
-                                    while (pilUkuran3 < 1 || pilUkuran3 > 5)
+                                    do
                                     {
                                         cout << "=================" << endl;
                                         cout << "  Ukuran sepatu  " << endl;
@@ -328,7 +328,7 @@ void loginPembeli()
                                             cout << "Atau hubungi admin (0856-1404-1223)" << endl;
                                             continue;
                                         }
-                                    }
+                                    } while (pilUkuran3 < 1 || pilUkuran3 > 5);
                                     namaSepatu1.ukuran = ukuran3;
                                     break;
                                 case 4:
@@ -469,7 +469,7 @@ void loginPembeli()
                                     namaSepatu1.harga = 2000000;
                                     cout << endl;
                                     int pilUkuran7, ukuran7;
-                                    while (pilUkuran7 < 1 || pilUkuran7 > 5)
+                                    do
                                     {
                                         cout << "=================" << endl;
                                         cout << "  Ukuran sepatu  " << endl;
@@ -505,6 +505,7 @@ void loginPembeli()
                                             continue;
                                         }
                                     }
+                                    while (pilUkuran7 < 1 || pilUkuran7 > 5);
                                     namaSepatu1.ukuran = ukuran7;
                                     break;
                                 case 8:
