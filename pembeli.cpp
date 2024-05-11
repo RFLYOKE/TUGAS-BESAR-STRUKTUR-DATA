@@ -2,12 +2,11 @@
 #include "listSepatu.cpp"
 using namespace std;
 
-const int maksimal = 100;
+const int maksimal = 1000;
 bool keluar = false;
 char yakin;
 int pilihan;
 string dataMasuk;
-
 
 struct barang
 {
@@ -379,7 +378,7 @@ void loginPembeli()
                                 case 5:
                                     namaSepatu1.namaSepatu = "PREDATOR 24 GROUND BOOTS";
                                     namaSepatu1.tanggalRilis = "2024-02-11";
-                                    namaSepatu1.ukuran = 41;
+                                    namaSepatu1.harga = 1100000;
                                     cout << endl;
                                     int pilUkuran5, ukuran5;
                                     while (pilUkuran5 < 1 || pilUkuran5 > 5)
@@ -465,7 +464,7 @@ void loginPembeli()
                                     namaSepatu1.ukuran = ukuran6;
                                     break;
                                 case 7:
-                                    namaSepatu1.namaSepatu = "COLekLessPA GLORD 45";
+                                    namaSepatu1.namaSepatu = "COPA GLORD 45";
                                     namaSepatu1.tanggalRilis = "2022-05-22";
                                     namaSepatu1.harga = 2000000;
                                     cout << endl;
@@ -512,7 +511,7 @@ void loginPembeli()
                                     namaSepatu1.namaSepatu = "X CRAZYFAST LEAGUE LEKLESS";
                                     namaSepatu1.tanggalRilis = "2023-07-30";
                                     namaSepatu1.harga = 2400000;
-                                     cout << endl;
+                                    cout << endl;
                                     int pilUkuran8, ukuran8;
                                     while (pilUkuran8 < 1 || pilUkuran8 > 5)
                                     {
@@ -634,7 +633,7 @@ void loginPembeli()
                                     namaSepatu2.namaSepatu = "SEPATU RIVALRY 86 LOW";
                                     namaSepatu2.tanggalRilis = "2024-03-22";
                                     namaSepatu2.harga = 1700000;
-                                     cout << endl;
+                                    cout << endl;
                                     int pilUkuran2, ukuran2;
                                     while (pilUkuran2 < 1 || pilUkuran2 > 5)
                                     {
@@ -722,7 +721,7 @@ void loginPembeli()
                                     namaSepatu2.namaSepatu = "AE 1 LOW SHOES";
                                     namaSepatu2.tanggalRilis = "2022-10-10";
                                     namaSepatu2.harga = 1500000;
-                                     cout << endl;
+                                    cout << endl;
                                     int pilUkuran4, ukuran4;
                                     while (pilUkuran4 < 1 || pilUkuran4 > 5)
                                     {

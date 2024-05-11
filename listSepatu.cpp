@@ -5,7 +5,7 @@ struct Sepatu
 {
     string namaSepatu;
     string tanggalRilis;
-    float ukuran;
+    int ukuran;
     int harga;
 };
 
