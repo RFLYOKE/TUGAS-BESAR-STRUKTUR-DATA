@@ -200,7 +200,7 @@ void loginAdmin()
                                 break;
 
                             }
-                        }while(pilkategori != 5);
+                        }while(pilkategori <1 || pilkategori> 5);
                     break;
                     case 2: cout<<"t"<<endl;
                     break;
@@ -208,11 +208,12 @@ void loginAdmin()
                     break;
                     case 4: cout<<"t"<<endl;
                     break;
-                    case 5:
+                    case 0:
                     cout<<"---KELUAR----\n"<<endl;
                     break;
                     default:
                     cout<<"Pilihan yang anda masukkan salah \n";
+                    cout<<"---KELUAR---\n";
                     break;
                 }
             }while(pil != 0);
