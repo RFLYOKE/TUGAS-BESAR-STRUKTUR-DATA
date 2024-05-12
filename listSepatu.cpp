@@ -12,6 +12,7 @@ struct Sepatu
 extern void tampilanPembelian();
 
 void listSepatu(){
+    cout << "----------------------------------------------------------------\n";
     cout << "Informasi Sepatu Yang Tersedia:\n";
     cout << "----------------------------------------------------------------\n";
     cout << " No.    Nama Sepatu      Tanggal Rilis     Ukuran      Harga\n";

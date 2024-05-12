@@ -7,6 +7,7 @@ bool keluar = false;
 char yakin;
 int pilihan;
 string dataMasuk;
+int totalHarga = 0;
 
 struct barang
 {
@@ -103,6 +104,7 @@ void tampilanPembelian()
         for (int i = 1; i <= sepatu.tempat; i++)
         {
             cout << i << ". " << sepatu.data[i].namaSepatu << "   " << sepatu.data[i].tanggalRilis << "   " << sepatu.data[i].ukuran << "   " << sepatu.data[i].harga << endl;
+            totalHarga += sepatu.data[i].harga;
         }
     }
 }
@@ -1221,10 +1223,18 @@ void loginPembeli()
                     listSepatu();
                     break;
                 case 5:
-                    cout << "=========================" << endl;
-                    cout << "     Menu Pembayaran     " << endl;
-                    cout << "=========================" << endl;
-                    
+                    cout << "================================================================" << endl;
+                    cout << "                         Menu Pembayaran                        " << endl;
+                    cout << "================================================================" << endl;
+                    cout << "----------------------------------------------------------------\n";
+                    cout << "Informasi pembelian sepatu:\n";
+                    cout << "----------------------------------------------------------------\n";
+                    cout << " No.    Nama Sepatu      Tanggal Rilis     Ukuran      Harga\n";
+                    cout << "----------------------------------------------------------------\n";
+                    tampilanPembelian();
+                    cout << "----------------------------------------------------------------\n";
+                    cout << "Total Harga                                          " << totalHarga << endl;
+
                     break;
                 case 0:
                     cout << "Terima Kasih Sudah Datang" << endl;
