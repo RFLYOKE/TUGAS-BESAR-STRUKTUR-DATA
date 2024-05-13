@@ -666,7 +666,7 @@ void loginPembeli()
                                     namaSepatu2.harga = 1500000;
                                     cout << endl;
                                     int pilUkuran4, ukuran4;
-                                    while (pilUkuran4 < 1 || pilUkuran4 > 5)
+                                    do
                                     {
                                         ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
@@ -693,8 +693,8 @@ void loginPembeli()
                                             cout << "Atau hubungi admin (0856-1404-1223)" << endl;
                                             continue;
                                         }
-                                    }
-                                    namaSepatu2.ukuran = ukuran4;
+                                    } while (pilUkuran4 < 1 || pilUkuran4 > 5);
+                                        namaSepatu2.ukuran = ukuran4;
                                     break;
                                 case 5:
                                     namaSepatu2.namaSepatu = "ADIZERO SELECT 2.0 SHOES";
