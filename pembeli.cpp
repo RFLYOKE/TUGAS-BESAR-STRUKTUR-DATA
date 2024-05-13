@@ -105,6 +105,7 @@ void tampilanPembelian()
         {
             cout << i << ". " << sepatu.data[i].namaSepatu << "   " << sepatu.data[i].tanggalRilis << "   " << sepatu.data[i].ukuran << "   " << sepatu.data[i].harga << endl;
             totalHarga += sepatu.data[i].harga;
+            cout << "Total Harga                                          " << totalHarga << endl;
         }
     }
 }
@@ -234,7 +235,7 @@ void loginPembeli()
                                     namaSepatu1.harga = 2500000;
                                     cout << endl;
                                     int pilUkuran1, ukuran1;
-                                    while (pilUkuran1 < 1 || pilUkuran1 > 5)
+                                    do
                                     {
                                         ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
@@ -261,8 +262,8 @@ void loginPembeli()
                                             cout << "Atau hubungi admin (0856-1404-1223)" << endl;
                                             continue;
                                         }
-                                    }
-                                    namaSepatu1.ukuran = ukuran1;
+                                    } while (pilUkuran1 < 1 || pilUkuran1 > 5);
+                                        namaSepatu1.ukuran = ukuran1;
                                     break;
                                 case 2:
                                     namaSepatu1.namaSepatu = "SAMBA INTER MIAMI CF";
@@ -1223,6 +1224,7 @@ void loginPembeli()
                     listSepatu();
                     break;
                 case 5:
+                    int bayar;
                     cout << "================================================================" << endl;
                     cout << "                         Menu Pembayaran                        " << endl;
                     cout << "================================================================" << endl;
@@ -1233,7 +1235,12 @@ void loginPembeli()
                     cout << "----------------------------------------------------------------\n";
                     tampilanPembelian();
                     cout << "----------------------------------------------------------------\n";
-                    cout << "Total Harga                                          " << totalHarga << endl;
+                    cout << endl;
+                    do{
+                    cout << "Silahkan masukkan nominal pembayaran sesuai total yang dibeli: ";
+                    cin >> bayar;
+                    }while(bayar != totalHarga);
+                    cout << "Pembayaran Berhasil..." << endl;
 
                     break;
                 case 0:
