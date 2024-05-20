@@ -105,8 +105,8 @@ void tampilanPembelian()
         {
             cout << i << ". " << sepatu.data[i].namaSepatu << "   " << sepatu.data[i].tanggalRilis << "   " << sepatu.data[i].ukuran << "   " << sepatu.data[i].harga << endl;
             totalHarga += sepatu.data[i].harga;
-            cout << "Total Harga                                          " << totalHarga << endl;
         }
+            cout << "Total Harga                                          " << totalHarga << endl;
     }
 }
 
