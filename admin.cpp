@@ -6,6 +6,7 @@ using namespace std;
 const string username = "admin";
 const string password = "admin123";
 extern void tampilanPembelian();
+extern void tampilkanDataPembeli();
 time_t now = time(0);
 tm *ltm = localtime(&now);
 
