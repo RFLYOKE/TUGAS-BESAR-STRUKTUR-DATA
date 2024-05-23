@@ -1,7 +1,6 @@
 #include <iostream>
 #include <iomanip>
 #include <ctime>
-#include <fstream>
 using namespace std;
 
 const string username = "admin";
@@ -67,7 +66,7 @@ void loginAdmin()
                 cout << "Pilihan anda salah, silahkan coba lagi..." << endl;
                 continue;
             }
-            } while(pilih < 0 || pilih > 3);
+            } while(pilih < 0 || pilih > 2);
         }
         else
         {
