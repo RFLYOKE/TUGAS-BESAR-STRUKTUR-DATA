@@ -90,13 +90,13 @@ void popSemuaBarang()
     else
     {
         cout << "Semua Barang Berhasil Di Cancel" << endl;
-        sepatu.tempat = -1; // Reset indeks
+        sepatu.tempat = -1; 
     }
 }
 
 void tampilkanDataPembeli()
 {
-   ifstream fileIn("saveData.txt"); // Membuka file untuk dibaca
+   ifstream fileIn("saveData.txt"); 
     if (!fileIn)
     {
        cout << "Gagal membuka file dataPembeli.txt" <<endl;
@@ -106,16 +106,16 @@ void tampilkanDataPembeli()
    string line;
    cout << "Data Pembeli:" <<endl;
     while (getline(fileIn, line))
-    {                                   // Membaca setiap baris dari file
-       cout << line <<endl; // Menampilkan baris ke konsol
+    {                                  
+       cout << line <<endl; 
     }
 
-    fileIn.close(); // Menutup file
+    fileIn.close(); 
 }
 
 void tampilanPembelian()
 {
-    totalHarga = 0; // Reset total harga
+    totalHarga = 0; 
     ofstream fileOut("saveData.txt");
     if (!fileOut)
     {
