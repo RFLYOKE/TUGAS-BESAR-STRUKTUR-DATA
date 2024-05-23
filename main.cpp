@@ -4,7 +4,6 @@
 
 using namespace std;
 
-
 int main(){
     int pilihanAnda;
     do
@@ -41,5 +40,6 @@ int main(){
             cout << endl;
         }
     } while (pilihanAnda < 1 || pilihanAnda > 2);
+    
     return 0;
 }

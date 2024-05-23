@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fstream>
 #include "listSepatu.cpp"
 using namespace std;
 
@@ -93,24 +94,56 @@ void popSemuaBarang()
     }
 }
 
+void tampilkanDataPembeli()
+{
+   ifstream fileIn("saveData.txt"); // Membuka file untuk dibaca
+    if (!fileIn)
+    {
+       cout << "Gagal membuka file dataPembeli.txt" <<endl;
+        return;
+    }
+
+   string line;
+   cout << "Data Pembeli:" <<endl;
+    while (getline(fileIn, line))
+    {                                   // Membaca setiap baris dari file
+       cout << line <<endl; // Menampilkan baris ke konsol
+    }
+
+    fileIn.close(); // Menutup file
+}
+
 void tampilanPembelian()
 {
-    if (barangBelanjaKosong() == true)
+    totalHarga = 0; // Reset total harga
+    ofstream fileOut("saveData.txt");
+    if (!fileOut)
+    {
+        cout << "Gagal membuka file saveData.txt" << endl;
+        return;
+    }
+
+    else if (barangBelanjaKosong())
     {
         cout << "Tidak Ada Barang Belanja" << endl;
+        fileOut << "Tidak Ada Barang Belanja" << endl;
     }
     else
     {
         for (int i = 1; i <= sepatu.tempat; i++)
         {
             cout << i << ". " << sepatu.data[i].namaSepatu << "   " << sepatu.data[i].tanggalRilis << "   " << sepatu.data[i].ukuran << "   " << sepatu.data[i].harga << endl;
+            fileOut << i << ". " << sepatu.data[i].namaSepatu << "   " << sepatu.data[i].tanggalRilis << "   " << sepatu.data[i].ukuran << "   " << sepatu.data[i].harga << endl;
             totalHarga += sepatu.data[i].harga;
         }
-            cout << "Total Harga                                          " << totalHarga << endl;
+        cout << "Total Harga                                          " << totalHarga << endl;
+        fileOut << "Total Harga                                          " << totalHarga << endl;
     }
+    fileOut.close();
 }
 
-void ukuranSepatu(){
+void ukuranSepatu()
+{
     cout << "=================" << endl;
     cout << "  Ukuran sepatu  " << endl;
     cout << "=================" << endl;
@@ -121,7 +154,6 @@ void ukuranSepatu(){
     cout << "| 5.| 42        |" << endl;
     cout << "=================" << endl;
 }
-
 
 void loginPembeli()
 {
@@ -165,15 +197,15 @@ void loginPembeli()
 
             do
             {
-                cout << "======================================================" << endl;
-                cout << "|           MENU PEMBELI                             |" << endl;
-                cout << "| 1.| List Sepatu Tersedia                           |" << endl;
-                cout << "| 2.| Hapus sepatu terakhir yang dimasukkan          |" << endl;
-                cout << "| 3.| Pembatalan pembelian                           |" << endl;
-                cout << "| 4.| Rekapan Pembelian                              |" << endl;
-                cout << "| 5.| Pembayaran                                     |" << endl;
-                cout << "| 0.| Keluar                                         |" << endl;
-                cout << "======================================================" << endl;
+                cout << "==============================================" << endl;
+                cout << "|                MENU PEMBELI                |" << endl;
+                cout << "| 1.| List Sepatu Tersedia                   |" << endl;
+                cout << "| 2.| Hapus sepatu terakhir yang dimasukkan  |" << endl;
+                cout << "| 3.| Pembatalan pembelian                   |" << endl;
+                cout << "| 4.| Rekapan Pembelian                      |" << endl;
+                cout << "| 5.| Pembayaran                             |" << endl;
+                cout << "| 0.| Keluar                                 |" << endl;
+                cout << "==============================================" << endl;
                 cout << "Silahkan masukkan pilihan anda: ";
                 cin >> pilih;
                 cout << endl;
@@ -263,7 +295,7 @@ void loginPembeli()
                                             continue;
                                         }
                                     } while (pilUkuran1 < 1 || pilUkuran1 > 5);
-                                        namaSepatu1.ukuran = ukuran1;
+                                    namaSepatu1.ukuran = ukuran1;
                                     break;
                                 case 2:
                                     namaSepatu1.namaSepatu = "SAMBA INTER MIAMI CF";
@@ -343,7 +375,7 @@ void loginPembeli()
                                     namaSepatu1.harga = 2100000;
                                     cout << endl;
                                     int pilUkuran4, ukuran4;
-                                    while (pilUkuran4 < 1 || pilUkuran4 > 5)
+                                    do
                                     {
                                         ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
@@ -370,7 +402,7 @@ void loginPembeli()
                                             cout << "Atau hubungi admin (0856-1404-1223)" << endl;
                                             continue;
                                         }
-                                    }
+                                    } while (pilUkuran4 < 1 || pilUkuran4 > 5);
                                     namaSepatu1.ukuran = ukuran4;
                                     break;
                                 case 5:
@@ -379,7 +411,7 @@ void loginPembeli()
                                     namaSepatu1.harga = 1100000;
                                     cout << endl;
                                     int pilUkuran5, ukuran5;
-                                    while (pilUkuran5 < 1 || pilUkuran5 > 5)
+                                    do
                                     {
                                         ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
@@ -406,7 +438,7 @@ void loginPembeli()
                                             cout << "Atau hubungi admin (0856-1404-1223)" << endl;
                                             continue;
                                         }
-                                    }
+                                    } while (pilUkuran5 < 1 || pilUkuran5 > 5);
                                     namaSepatu1.ukuran = ukuran5;
                                     break;
                                 case 6:
@@ -415,7 +447,7 @@ void loginPembeli()
                                     namaSepatu1.harga = 1900000;
                                     cout << endl;
                                     int pilUkuran6, ukuran6;
-                                    while (pilUkuran6 < 1 || pilUkuran6 > 5)
+                                    do
                                     {
                                         ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
@@ -442,7 +474,7 @@ void loginPembeli()
                                             cout << "Atau hubungi admin (0856-1404-1223)" << endl;
                                             continue;
                                         }
-                                    }
+                                    } while (pilUkuran6 < 1 || pilUkuran6 > 5);
                                     namaSepatu1.ukuran = ukuran6;
                                     break;
                                 case 7:
@@ -478,8 +510,7 @@ void loginPembeli()
                                             cout << "Atau hubungi admin (0856-1404-1223)" << endl;
                                             continue;
                                         }
-                                    }
-                                    while (pilUkuran7 < 1 || pilUkuran7 > 5);
+                                    } while (pilUkuran7 < 1 || pilUkuran7 > 5);
                                     namaSepatu1.ukuran = ukuran7;
                                     break;
                                 case 8:
@@ -488,7 +519,7 @@ void loginPembeli()
                                     namaSepatu1.harga = 2400000;
                                     cout << endl;
                                     int pilUkuran8, ukuran8;
-                                    while (pilUkuran8 < 1 || pilUkuran8 > 5)
+                                    do
                                     {
                                         ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
@@ -515,7 +546,7 @@ void loginPembeli()
                                             cout << "Atau hubungi admin (0856-1404-1223)" << endl;
                                             continue;
                                         }
-                                    }
+                                    } while (pilUkuran8 < 1 || pilUkuran8 > 5);
                                     namaSepatu1.ukuran = ukuran8;
                                     break;
                                 default:
@@ -556,9 +587,9 @@ void loginPembeli()
                                     namaSepatu2.namaSepatu = "FORUM LOW SHOES";
                                     namaSepatu2.tanggalRilis = "2023-11-15";
                                     namaSepatu2.harga = 1600000;
-                                     cout << endl;
+                                    cout << endl;
                                     int pilUkuran1, ukuran1;
-                                    while (pilUkuran1 < 1 || pilUkuran1 > 5)
+                                    do
                                     {
                                         ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
@@ -585,7 +616,7 @@ void loginPembeli()
                                             cout << "Atau hubungi admin (0856-1404-1223)" << endl;
                                             continue;
                                         }
-                                    }
+                                    } while (pilUkuran1 < 1 || pilUkuran1 > 5);
                                     namaSepatu2.ukuran = ukuran1;
                                     break;
                                 case 2:
@@ -594,7 +625,7 @@ void loginPembeli()
                                     namaSepatu2.harga = 1700000;
                                     cout << endl;
                                     int pilUkuran2, ukuran2;
-                                    while (pilUkuran2 < 1 || pilUkuran2 > 5)
+                                    do
                                     {
                                         ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
@@ -621,16 +652,16 @@ void loginPembeli()
                                             cout << "Atau hubungi admin (0856-1404-1223)" << endl;
                                             continue;
                                         }
-                                    }
+                                    } while (pilUkuran2 < 1 || pilUkuran2 > 5);
                                     namaSepatu2.ukuran = ukuran2;
                                     break;
                                 case 3:
                                     namaSepatu2.namaSepatu = "D.O.N. ISSUE 5 TRAINERS";
                                     namaSepatu2.tanggalRilis = "2023-01-05";
                                     namaSepatu2.harga = 1800000;
-                                     cout << endl;
+                                    cout << endl;
                                     int pilUkuran3, ukuran3;
-                                    while (pilUkuran3 < 1 || pilUkuran3 > 5)
+                                    do
                                     {
                                         ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
@@ -657,7 +688,7 @@ void loginPembeli()
                                             cout << "Atau hubungi admin (0856-1404-1223)" << endl;
                                             continue;
                                         }
-                                    }
+                                    } while (pilUkuran3 < 1 || pilUkuran3 > 5);
                                     namaSepatu2.ukuran = ukuran3;
                                     break;
                                 case 4:
@@ -694,15 +725,15 @@ void loginPembeli()
                                             continue;
                                         }
                                     } while (pilUkuran4 < 1 || pilUkuran4 > 5);
-                                        namaSepatu2.ukuran = ukuran4;
+                                    namaSepatu2.ukuran = ukuran4;
                                     break;
                                 case 5:
                                     namaSepatu2.namaSepatu = "ADIZERO SELECT 2.0 SHOES";
                                     namaSepatu2.tanggalRilis = "2023-02-20";
                                     namaSepatu2.harga = 1900000;
-                                     cout << endl;
+                                    cout << endl;
                                     int pilUkuran5, ukuran5;
-                                    while (pilUkuran5 < 1 || pilUkuran5 > 5)
+                                    do
                                     {
                                         ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
@@ -729,7 +760,7 @@ void loginPembeli()
                                             cout << "Atau hubungi admin (0856-1404-1223)" << endl;
                                             continue;
                                         }
-                                    }
+                                    } while (pilUkuran5 < 1 || pilUkuran5 > 5);
                                     namaSepatu2.ukuran = ukuran5;
                                     break;
                                 default:
@@ -772,8 +803,8 @@ void loginPembeli()
                                     namaSepatu3.tanggalRilis = "2023-12-15";
                                     namaSepatu3.harga = 1600000;
                                     cout << endl;
-                                    int pilUkuran1, ukuran1; 
-                                    while (pilUkuran1 < 1 || pilUkuran1 > 5)
+                                    int pilUkuran1, ukuran1;
+                                    do
                                     {
                                         ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
@@ -800,7 +831,7 @@ void loginPembeli()
                                             cout << "Atau hubungi admin (0856-1404-1223)" << endl;
                                             continue;
                                         }
-                                    }
+                                    } while (pilUkuran1 < 1 || pilUkuran1 > 5);
                                     namaSepatu3.ukuran = ukuran1;
                                     break;
                                 case 2:
@@ -808,8 +839,8 @@ void loginPembeli()
                                     namaSepatu3.tanggalRilis = "2024-03-21";
                                     namaSepatu3.harga = 1700000;
                                     cout << endl;
-                                    int pilUkuran2, ukuran2; // Changed variable names to avoid redeclaration
-                                    while (pilUkuran2 < 1 || pilUkuran2 > 5)
+                                    int pilUkuran2, ukuran2;
+                                    do
                                     {
                                         ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
@@ -836,7 +867,7 @@ void loginPembeli()
                                             cout << "Atau hubungi admin (0856-1404-1223)" << endl;
                                             continue;
                                         }
-                                    }
+                                    } while (pilUkuran2 < 1 || pilUkuran2 > 5);
                                     namaSepatu3.ukuran = ukuran2;
                                     break;
                                 case 3:
@@ -845,7 +876,7 @@ void loginPembeli()
                                     namaSepatu3.harga = 1800000;
                                     cout << endl;
                                     int pilUkuran3, ukuran3; // Changed variable names to avoid redeclaration
-                                    while (pilUkuran3 < 1 || pilUkuran3 > 5)
+                                    do
                                     {
                                         ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
@@ -872,7 +903,7 @@ void loginPembeli()
                                             cout << "Atau hubungi admin (0856-1404-1223)" << endl;
                                             continue;
                                         }
-                                    }
+                                    } while (pilUkuran3 < 1 || pilUkuran3 > 5);
                                     namaSepatu3.ukuran = ukuran3;
                                     break;
                                 case 4:
@@ -881,7 +912,7 @@ void loginPembeli()
                                     namaSepatu3.harga = 1500000;
                                     cout << endl;
                                     int pilUkuran4, ukuran4; // Changed variable names to avoid redeclaration
-                                    while (pilUkuran4 < 1 || pilUkuran4 > 5)
+                                    do
                                     {
                                         ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
@@ -908,7 +939,7 @@ void loginPembeli()
                                             cout << "Atau hubungi admin (0856-1404-1223)" << endl;
                                             continue;
                                         }
-                                    }
+                                    } while (pilUkuran4 < 1 || pilUkuran4 > 5);
                                     namaSepatu3.ukuran = ukuran4;
                                     break;
                                 case 5:
@@ -916,8 +947,8 @@ void loginPembeli()
                                     namaSepatu3.tanggalRilis = "2021-02-20";
                                     namaSepatu3.harga = 1900000;
                                     cout << endl;
-                                    int pilUkuran5, ukuran5; // Changed variable names to avoid redeclaration
-                                    while (pilUkuran5 < 1 || pilUkuran5 > 5)
+                                    int pilUkuran5, ukuran5;
+                                    do
                                     {
                                         ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
@@ -944,7 +975,7 @@ void loginPembeli()
                                             cout << "Atau hubungi admin (0856-1404-1223)" << endl;
                                             continue;
                                         }
-                                    }
+                                    } while (pilUkuran5 < 1 || pilUkuran5 > 5);
                                     namaSepatu3.ukuran = ukuran5;
                                     break;
                                 case 6:
@@ -953,7 +984,7 @@ void loginPembeli()
                                     namaSepatu3.harga = 1900000;
                                     cout << endl;
                                     int pilUkuran6, ukuran6; // Changed variable names to avoid redeclaration
-                                    while (pilUkuran6 < 1 || pilUkuran6 > 5)
+                                    do
                                     {
                                         ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
@@ -980,7 +1011,7 @@ void loginPembeli()
                                             cout << "Atau hubungi admin (0856-1404-1223)" << endl;
                                             continue;
                                         }
-                                    }
+                                    } while (pilUkuran6 < 1 || pilUkuran6 > 5);
                                     namaSepatu3.ukuran = ukuran6;
                                     break;
                                 default:
@@ -1021,7 +1052,7 @@ void loginPembeli()
                                     namaSepatu4.namaSepatu = "SEPATU SAMBA OG";
                                     namaSepatu4.tanggalRilis = "2023-12-14";
                                     namaSepatu4.harga = 2200000;
-                                     cout << endl;
+                                    cout << endl;
                                     int pilUkuran1, ukuran1;
                                     do
                                     {
@@ -1057,9 +1088,9 @@ void loginPembeli()
                                     namaSepatu4.namaSepatu = "ABIBAS_N_BAPE";
                                     namaSepatu4.tanggalRilis = "2024-02-22";
                                     namaSepatu4.harga = 2300000;
-                                     cout << endl;
+                                    cout << endl;
                                     int pilUkuran2, ukuran2;
-                                    while (pilUkuran2 < 1 || pilUkuran2 > 5)
+                                    do
                                     {
                                         ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
@@ -1086,16 +1117,16 @@ void loginPembeli()
                                             cout << "Atau hubungi admin (0856-1404-1223)" << endl;
                                             continue;
                                         }
-                                    }
+                                    } while (pilUkuran2 < 1 || pilUkuran2 > 5);
                                     namaSepatu4.ukuran = ukuran2;
                                     break;
                                 case 3:
                                     namaSepatu4.namaSepatu = "SAMBA XLG SHOES";
                                     namaSepatu4.tanggalRilis = "2024-01-05";
                                     namaSepatu4.harga = 2400000;
-                                     cout << endl;
+                                    cout << endl;
                                     int pilUkuran3, ukuran3;
-                                    while (pilUkuran3 < 1 || pilUkuran3 > 5)
+                                    do
                                     {
                                         ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
@@ -1122,7 +1153,7 @@ void loginPembeli()
                                             cout << "Atau hubungi admin (0856-1404-1223)" << endl;
                                             continue;
                                         }
-                                    }
+                                    } while (pilUkuran3 < 1 || pilUkuran3 > 5);
                                     namaSepatu4.ukuran = ukuran3;
                                     break;
                                 case 4:
@@ -1131,7 +1162,7 @@ void loginPembeli()
                                     namaSepatu4.harga = 2200000;
                                     cout << endl;
                                     int pilUkuran4, ukuran4;
-                                    while (pilUkuran4 < 1 || pilUkuran4 > 5)
+                                    do
                                     {
                                         ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
@@ -1158,7 +1189,7 @@ void loginPembeli()
                                             cout << "Atau hubungi admin (0856-1404-1223)" << endl;
                                             continue;
                                         }
-                                    }
+                                    } while (pilUkuran4 < 1 || pilUkuran4 > 5);
                                     namaSepatu4.ukuran = ukuran4;
                                     break;
                                 case 5:
@@ -1167,7 +1198,7 @@ void loginPembeli()
                                     namaSepatu4.harga = 1200000;
                                     cout << endl;
                                     int pilUkuran5, ukuran5;
-                                    while (pilUkuran5 < 1 || pilUkuran5 > 5)
+                                    do
                                     {
                                         ukuranSepatu();
                                         cout << "Silahkan pilih ukuran sepatu yang tersedia (1/2/3/4/5): ";
@@ -1194,7 +1225,7 @@ void loginPembeli()
                                             cout << "Atau hubungi admin (0856-1404-1223)" << endl;
                                             continue;
                                         }
-                                    }
+                                    } while (pilUkuran5 < 1 || pilUkuran5 > 5);
                                     namaSepatu4.ukuran = ukuran5;
                                     break;
                                 default:
@@ -1236,10 +1267,11 @@ void loginPembeli()
                     tampilanPembelian();
                     cout << "----------------------------------------------------------------\n";
                     cout << endl;
-                    do{
-                    cout << "Silahkan masukkan nominal pembayaran sesuai total yang dibeli: ";
-                    cin >> bayar;
-                    }while(bayar != totalHarga);
+                    do
+                    {
+                        cout << "Silahkan masukkan nominal pembayaran sesuai total yang dibeli: ";
+                        cin >> bayar;
+                    } while (bayar != totalHarga);
                     cout << "Pembayaran Berhasil..." << endl;
 
                     break;
@@ -1264,3 +1296,4 @@ void loginPembeli()
         }
     } while (!loginSukses && maksimal < 3);
 }
+
