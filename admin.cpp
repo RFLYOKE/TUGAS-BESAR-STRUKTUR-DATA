@@ -8,6 +8,7 @@ const string password = "admin123";
 extern void tampilanPembelian();
 extern void tampilkanDataPembeli();
 extern void tampilWaktuTransaksi();
+extern void loginUser();
 time_t now = time(0);
 tm *ltm = localtime(&now);
 
