@@ -62,12 +62,14 @@ void loginAdmin()
             case 2:
                 loginUser();
                 continue;
-            
+            case 0:
+                cout << "Terima Kasih Admin Baik :)" << endl;
+                break;
             default:
                 cout << "Pilihan anda salah, silahkan coba lagi..." << endl;
                 continue;
             }
-            } while(pilih < 0 || pilih > 2);
+            } while(pilih != 0);
         }
         else
         {
