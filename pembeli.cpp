@@ -132,8 +132,8 @@ void tampilanPembelian()
     {
         for (int i = 1; i <= sepatu.tempat; i++)
         {
-            cout << i << ". " << sepatu.data[i].namaSepatu << "   " << sepatu.data[i].tanggalRilis << "   " << sepatu.data[i].ukuran << "   " << sepatu.data[i].harga << endl;
-            fileOut << i << ". " << sepatu.data[i].namaSepatu << "   " << sepatu.data[i].tanggalRilis << "   " << sepatu.data[i].ukuran << "   " << sepatu.data[i].harga << endl;
+            cout << i << ". " << sepatu.data[i].namaSepatu << "     " << sepatu.data[i].tanggalRilis << "     " << sepatu.data[i].ukuran << "     " << sepatu.data[i].harga << endl;
+            fileOut << i << ". " << sepatu.data[i].namaSepatu << "     " << sepatu.data[i].tanggalRilis << "     " << sepatu.data[i].ukuran << "     " << sepatu.data[i].harga << endl;
             totalHarga += sepatu.data[i].harga;
         }
         cout << "Total Harga                                          " << totalHarga << endl;
