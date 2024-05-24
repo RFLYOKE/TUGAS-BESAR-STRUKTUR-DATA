@@ -90,32 +90,33 @@ void popSemuaBarang()
     else
     {
         cout << "Semua Barang Berhasil Di Cancel" << endl;
-        sepatu.tempat = -1; 
+        sepatu.tempat = -1;
     }
 }
 
 void tampilkanDataPembeli()
 {
-   ifstream fileIn("saveData.txt"); 
+    ifstream fileIn("saveData.txt");
     if (!fileIn)
     {
-       cout << "Gagal membuka file dataPembeli.txt" <<endl;
+        cout << "Gagal membuka file dataPembeli.txt" << endl;
         return;
     }
 
-   string line;
-   cout << "Data Pembeli:" <<endl;
+    string line;
+    cout << "Data Pembeli:" << endl;
     while (getline(fileIn, line))
-    {                                  
-       cout << line <<endl; 
+    {
+        cout << line << endl;
     }
 
-    fileIn.close(); 
+    fileIn.close();
 }
 
 void tampilanPembelian()
 {
     totalHarga = 0;
+
     ofstream fileOut("saveData.txt", ios::app);
     if (!fileOut)
     {
@@ -156,7 +157,8 @@ void ukuranSepatu()
     cout << "=================" << endl;
 }
 
-void loginUser(){
+void loginUser()
+{
     ifstream fileUser("loginUser.txt", ios::app);
     if (!fileUser)
     {
@@ -202,11 +204,11 @@ void loginPembeli()
         fileLogin << "Username user: " << username << endl;
     }
     fileLogin.close();
-        cout << "Password* (no spasi): ";
-        cin >> password;
-        cout << endl;
-        cout << "Akun Anda Berhasil Dibuat..." << endl;
-        cout << endl;
+    cout << "Password* (no spasi): ";
+    cin >> password;
+    cout << endl;
+    cout << "Akun Anda Berhasil Dibuat..." << endl;
+    cout << endl;
 
     do
     {
@@ -1301,8 +1303,15 @@ void loginPembeli()
                     {
                         cout << "Silahkan masukkan nominal pembayaran sesuai total yang dibeli: ";
                         cin >> bayar;
-                    } while (bayar != totalHarga);
-                    cout << "Pembayaran Berhasil..." << endl;
+                    } while (bayar != totalHarga && bayar == 0);
+                    if (barangBelanjaKosong() == true)
+                    {
+                        cout << "Anda tidak membeli apa apa" << endl;
+                    }
+                    else
+                    {
+                        cout << "Pembayaran Berhasil..." << endl;
+                    }
 
                     break;
                 case 0:
@@ -1324,8 +1333,5 @@ void loginPembeli()
                 break;
             }
         }
-    }
-    while (!loginSukses && maksimal < 3)
-        ;
+    } while (!loginSukses && maksimal < 3);
 }
-
