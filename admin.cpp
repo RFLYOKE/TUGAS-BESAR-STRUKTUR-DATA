@@ -7,6 +7,7 @@ const string username = "admin";
 const string password = "admin123";
 extern void tampilanPembelian();
 extern void tampilkanDataPembeli();
+extern void tampilWaktuTransaksi();
 time_t now = time(0);
 tm *ltm = localtime(&now);
 
@@ -16,7 +17,6 @@ void loginAdmin()
     bool sukses = false;
     int kesempatan = 0;
     int pilih;
-    int totalHarga = 0; 
 
     do
     {
@@ -41,7 +41,7 @@ void loginAdmin()
             cout << "|                MENU ADMIN                  |" << endl;
             cout << "==============================================" << endl;
             cout << "| 1.| Daftar Pemasukan Harian                |" << endl;
-            cout << "| 2.| Keuntungan Harian                      |" << endl;                             
+            cout << "| 2.| Daftar Akun Login                      |" << endl;                             
             cout << "| 0.| Keluar                                 |" << endl;
             cout << "==============================================" << endl;
             cout << "Silahkan pilih menu: ";
@@ -50,7 +50,7 @@ void loginAdmin()
             {
             case 1:
                 cout << "----------------------------------------------------------------\n";
-                cout << setfill('0') << setw(2) << ltm->tm_mday << "/" << setfill('0') << setw(2) << 1 + ltm->tm_mon << "/" << 1900 + ltm->tm_year << endl;
+                tampilWaktuTransaksi();
                 cout << "                       DATA PEMBELIAN SEPATU\n";
                 cout << "\n";
                 cout << "----------------------------------------------------------------\n";
@@ -60,7 +60,7 @@ void loginAdmin()
                 cout << "----------------------------------------------------------------\n";
                 continue;
             case 2:
-                cout << "Total Harga                                          " << totalHarga << endl;
+                loginUser();
                 continue;
             
             default:

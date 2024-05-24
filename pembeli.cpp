@@ -115,8 +115,8 @@ void tampilkanDataPembeli()
 
 void tampilanPembelian()
 {
-    totalHarga = 0; 
-    ofstream fileOut("saveData.txt");
+    totalHarga = 0;
+    ofstream fileOut("saveData.txt", ios::app);
     if (!fileOut)
     {
         cout << "Gagal membuka file saveData.txt" << endl;
@@ -138,6 +138,7 @@ void tampilanPembelian()
         }
         cout << "Total Harga                                          " << totalHarga << endl;
         fileOut << "Total Harga                                          " << totalHarga << endl;
+        fileOut << endl;
     }
     fileOut.close();
 }
@@ -155,6 +156,24 @@ void ukuranSepatu()
     cout << "=================" << endl;
 }
 
+void loginUser(){
+    ifstream fileUser("loginUser.txt", ios::app);
+    if (!fileUser)
+    {
+        cout << "Gagal membuka file dataPembeli.txt" << endl;
+        return;
+    }
+
+    string line;
+    cout << "Data Pembeli:" << endl;
+    while (getline(fileUser, line))
+    {
+        cout << line << endl;
+    }
+
+    fileUser.close();
+}
+
 void loginPembeli()
 {
     string username, password, usernameLogin, passwordLogin;
@@ -164,19 +183,30 @@ void loginPembeli()
     int pilih;
 
     // login pembeli
-    cout << "=============================================" << endl;
-    cout << "                HELLO FRIENDS!               " << endl;
-    cout << "              REGISTRASI DI SINI!            " << endl;
-    cout << "=============================================" << endl;
-    cout << endl;
-    cout << "Silahkan Buat Username dan Password anda" << endl;
-    cout << "Username* (no spasi): ";
-    cin >> username;
-    cout << "Password* (no spasi): ";
-    cin >> password;
-    cout << endl;
-    cout << "Akun Anda Berhasil Dibuat..." << endl;
-    cout << endl;
+    ofstream fileLogin("loginUser.txt", ios::app);
+    if (!fileLogin)
+    {
+        cout << "Tidak bisa membuka file loginUser.txt" << endl;
+        return;
+    }
+    else
+    {
+        cout << "=============================================" << endl;
+        cout << "                HELLO FRIENDS!               " << endl;
+        cout << "              REGISTRASI DI SINI!            " << endl;
+        cout << "=============================================" << endl;
+        cout << endl;
+        cout << "Silahkan Buat Username dan Password anda" << endl;
+        cout << "Username* (no spasi): ";
+        cin >> username;
+        fileLogin << "Username user: " << username << endl;
+    }
+    fileLogin.close();
+        cout << "Password* (no spasi): ";
+        cin >> password;
+        cout << endl;
+        cout << "Akun Anda Berhasil Dibuat..." << endl;
+        cout << endl;
 
     do
     {
@@ -1294,6 +1324,8 @@ void loginPembeli()
                 break;
             }
         }
-    } while (!loginSukses && maksimal < 3);
+    }
+    while (!loginSukses && maksimal < 3)
+        ;
 }
 
