@@ -117,7 +117,7 @@ void tampilanPembelian()
 {
     totalHarga = 0;
 
-    ofstream fileOut("saveData.txt", ios::app);
+    ofstream fileOut("saveData.txt", ios::out);
     if (!fileOut)
     {
         cout << "Gagal membuka file saveData.txt" << endl;
@@ -1308,9 +1308,11 @@ void loginPembeli()
                     {
                         cout << "Anda tidak membeli apa apa" << endl;
                     }
-                    else
+                    else if(bayar == totalHarga)
                     {
                         cout << "Pembayaran Berhasil..." << endl;
+                    } else{
+                        cout << "salah bang coba ulang" << endl;
                     }
 
                     break;

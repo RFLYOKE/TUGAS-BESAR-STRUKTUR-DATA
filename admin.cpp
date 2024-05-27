@@ -12,6 +12,51 @@ extern void loginUser();
 time_t now = time(0);
 tm *ltm = localtime(&now);
 
+struct organisasi
+{
+    organisasi *left;
+    string person;
+    organisasi *right;
+};
+
+organisasi *root;
+
+void strukturOrganisasi()
+{
+    root = new organisasi;
+    root->person = " AKMAL RAFLY DZUNURAIN (CEO)";
+    root->left = new organisasi;
+    root->left->person = "NAZLY RAFFA OKTAFIAN (CTO)";
+    root->right = new organisasi;
+    root->right->person = "SETYO PRABOWO ANOM (CFO)";
+    root->left->left = new organisasi;
+    root->left->left->person = "Lead Developer";
+    root->left->right = new organisasi;
+    root->left->right->person = "Lead Designer";
+    root->right->left = new organisasi;
+    root->right->left->person = "Lead Finance";
+    root->right->right = new organisasi;
+    root->right->right->person = "Lead Marketing";
+}
+
+void bacaorganisasi()
+{
+    if (root != NULL)
+    {
+        cout << endl;
+        cout << "Struktur Organisasi:\n";
+        cout <<"\t\t" << root->person << endl;
+        cout << root->left->person << "\t" << root->right->person << endl;
+        cout << root->left->left->person << "  \t\t\t" << root->right->left->person << endl;
+        cout << root->left->right->person << " \t\t\t\t" << root->right->right->person << endl;
+        cout << endl;
+    }
+    else
+    {
+        cout << "Struktur organisasi belum diinisialisasi.\n";
+    }
+}
+
 void loginAdmin()
 {
     string usernameInput, passwordInput;
@@ -43,6 +88,7 @@ void loginAdmin()
             cout << "==============================================" << endl;
             cout << "| 1.| Daftar Pemasukan Harian                |" << endl;
             cout << "| 2.| Daftar Akun Login                      |" << endl;                             
+            cout << "| 3.| Struktur Organisasi                    |" << endl;                             
             cout << "| 0.| Keluar                                 |" << endl;
             cout << "==============================================" << endl;
             cout << "Silahkan pilih menu: ";
@@ -52,7 +98,7 @@ void loginAdmin()
             case 1:
                 cout << "----------------------------------------------------------------\n";
                 tampilWaktuTransaksi();
-                cout << "                       DATA PEMBELIAN SEPATU\n";
+                cout << "                       person PEMBELIAN SEPATU\n";
                 cout << "\n";
                 cout << "----------------------------------------------------------------\n";
                 cout << " No.    Nama Sepatu      Tanggal Rilis     Ukuran      Harga\n";
@@ -62,6 +108,10 @@ void loginAdmin()
                 continue;
             case 2:
                 loginUser();
+                continue;
+            case 3:
+                strukturOrganisasi();
+                bacaorganisasi();
                 continue;
             case 0:
                 cout << "Terima Kasih Admin Baik :)" << endl;
