@@ -30,13 +30,13 @@ void strukturOrganisasi()
     root->right = new organisasi;
     root->right->person = "SETYO PRABOWO ANOM (CFO)";
     root->left->left = new organisasi;
-    root->left->left->person = "Lead Developer";
+    root->left->left->person = "FAHRI (Lead Developer)";
     root->left->right = new organisasi;
-    root->left->right->person = "Lead Designer";
+    root->left->right->person = "ZAIN (Lead Designer)";
     root->right->left = new organisasi;
-    root->right->left->person = "Lead Finance";
+    root->right->left->person = "DIMAS (Lead Finance)";
     root->right->right = new organisasi;
-    root->right->right->person = "Lead Marketing";
+    root->right->right->person = "WAFIUDIN (Lead Marketing)";
 }
 
 void bacaorganisasi()
@@ -45,10 +45,14 @@ void bacaorganisasi()
     {
         cout << endl;
         cout << "Struktur Organisasi:\n";
+        cout << endl;
         cout <<"\t\t" << root->person << endl;
+        cout << endl;
         cout << root->left->person << "\t" << root->right->person << endl;
-        cout << root->left->left->person << "  \t\t\t" << root->right->left->person << endl;
-        cout << root->left->right->person << " \t\t\t\t" << root->right->right->person << endl;
+        cout << endl;
+        cout << root->left->left->person << "\t\t" << root->right->left->person << endl;
+        cout << endl;
+        cout << root->left->right->person << "\t\t" << root->right->right->person << endl;
         cout << endl;
     }
     else
@@ -98,7 +102,7 @@ void loginAdmin()
             case 1:
                 cout << "----------------------------------------------------------------\n";
                 tampilWaktuTransaksi();
-                cout << "                       person PEMBELIAN SEPATU\n";
+                cout << "                       DATA PEMBELIAN SEPATU\n";
                 cout << "\n";
                 cout << "----------------------------------------------------------------\n";
                 cout << " No.    Nama Sepatu      Tanggal Rilis     Ukuran      Harga\n";

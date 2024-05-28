@@ -20,15 +20,14 @@ void tampilWaktuTransaksi(){
     {
         cout << "Gagal membuka file dataPembeli.txt" << endl;
         return;
+    } else{
+        string line;
+        cout << endl;
+        while (getline(fileMasuk, line))
+        {
+            cout << line << endl;
+        }
     }
-
-    string line;
-    cout << "Data Pembeli:" << endl;
-    while (getline(fileMasuk, line))
-    {
-        cout << line << endl;
-    }
-
     fileMasuk.close();
 }
 

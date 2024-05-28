@@ -101,15 +101,14 @@ void tampilkanDataPembeli()
     {
         cout << "Gagal membuka file dataPembeli.txt" << endl;
         return;
+    } else{
+        string line;
+        cout << endl;
+        while (getline(fileIn, line))
+        {
+            cout << line << endl;
+        }
     }
-
-    string line;
-    cout << "Data Pembeli:" << endl;
-    while (getline(fileIn, line))
-    {
-        cout << line << endl;
-    }
-
     fileIn.close();
 }
 
@@ -164,15 +163,14 @@ void loginUser()
     {
         cout << "Gagal membuka file dataPembeli.txt" << endl;
         return;
+    } else {
+        string line;
+        cout << endl;
+        while (getline(fileUser, line))
+        {
+            cout << line << endl;
+        }
     }
-
-    string line;
-    cout << "Data Pembeli:" << endl;
-    while (getline(fileUser, line))
-    {
-        cout << line << endl;
-    }
-
     fileUser.close();
 }
 
@@ -1312,7 +1310,7 @@ void loginPembeli()
                     {
                         cout << "Pembayaran Berhasil..." << endl;
                     } else{
-                        cout << "salah bang coba ulang" << endl;
+                        cout << "Anda salah Input...." << endl;
                     }
 
                     break;
