@@ -138,7 +138,6 @@ void tampilanPembelian()
         }
         cout << "Total Harga                                          " << totalHarga << endl;
         fileOut << "Total Harga                                          " << totalHarga << endl;
-        fileOut << endl;
     }
     fileOut.close();
 }
