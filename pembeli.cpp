@@ -1302,7 +1302,7 @@ void loginPembeli()
                         cout << "Silahkan masukkan nominal pembayaran sesuai total yang dibeli: ";
                         cin >> bayar;
                     } while (bayar != totalHarga);
-                    if (barangBelanjaKosong() == true || bayar != 0)
+                    if (barangBelanjaKosong() == true)
                     {
                         cout << "Anda tidak membeli apa apa" << endl;
                     }
