@@ -212,7 +212,7 @@ void loginPembeli()
         cout << "=============================================" << endl;
         cout << "                LOGIN PEMBELI                " << endl;
         cout << "=============================================" << endl;
-        cout << "Silahkan Masukkan Username dan Password anda" << endl;
+        cout << "Silahkan Masukkan Username dan Password anda " << endl;
         cout << "Username: ";
         cin >> usernameLogin;
         cout << "Password: ";
