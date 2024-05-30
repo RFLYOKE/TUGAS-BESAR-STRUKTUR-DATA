@@ -19,24 +19,26 @@ struct organisasi
     organisasi *right;
 };
 
+
+
 organisasi *root;
 
 void strukturOrganisasi()
 {
     root = new organisasi;
-    root->person = " AKMAL RAFLY DZUNURAIN (CEO)";
+    root->person = " AKMAL RAFLY (CEO)";
     root->left = new organisasi;
-    root->left->person = "NAZLY RAFFA OKTAFIAN (CTO)";
+    root->left->person = "NAZLY RAFFA (CTO)";
     root->right = new organisasi;
-    root->right->person = "SETYO PRABOWO ANOM (CFO)";
+    root->right->person = "SETYO PRABOWO(CFO)";
     root->left->left = new organisasi;
-    root->left->left->person = "FAHRI (Lead Developer)";
+    root->left->left->person = "OKTAVIAN (Lead Developer)";
     root->left->right = new organisasi;
-    root->left->right->person = "ZAIN (Lead Designer)";
+    root->left->right->person = "ANOM SENJOYO (Lead Designer)";
     root->right->left = new organisasi;
-    root->right->left->person = "DIMAS (Lead Finance)";
+    root->right->left->person = "NUZQU (Lead Finance)";
     root->right->right = new organisasi;
-    root->right->right->person = "WAFIUDIN (Lead Marketing)";
+    root->right->right->person = "DZUNURAIN (Lead Marketing)";
 }
 
 void bacaorganisasi()
@@ -111,6 +113,7 @@ void loginAdmin()
                 cout << "----------------------------------------------------------------\n";
                 continue;
             case 2:
+                cout << "Daftar Akun Masuk: " << endl;
                 loginUser();
                 continue;
             case 3:
