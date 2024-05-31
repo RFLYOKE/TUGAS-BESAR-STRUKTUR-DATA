@@ -18,9 +18,6 @@ struct organisasi
     string person;
     organisasi *right;
 };
-
-
-
 organisasi *root;
 
 void strukturOrganisasi()
@@ -48,9 +45,9 @@ void bacaorganisasi()
         cout << endl;
         cout << "Struktur Organisasi:\n";
         cout << endl;
-        cout <<"\t\t" << root->person << endl;
+        cout << "\t\t\t" << root->person << endl;
         cout << endl;
-        cout << root->left->person << "\t" << root->right->person << endl;
+        cout << root->left->person << "\t\t\t" << root->right->person << endl;
         cout << endl;
         cout << root->left->left->person << "\t\t" << root->right->left->person << endl;
         cout << endl;
@@ -60,6 +57,38 @@ void bacaorganisasi()
     else
     {
         cout << "Struktur organisasi belum diinisialisasi.\n";
+    }
+}
+
+struct tmbahStock
+{
+    int jumlah;
+    tmbahStock *next;
+};
+
+tmbahStock *head = nullptr;
+
+int totalStok = 100; // Stok default mulai dari 100
+
+void tambahJumlahStok(int jumlah)
+{
+    tmbahStock *stokBaru = new tmbahStock;
+    stokBaru->jumlah = jumlah;
+    stokBaru->next = head;
+    head = stokBaru;
+    totalStok += jumlah; // Tambahkan stok baru ke total stok
+    cout << "Jumlah Sepatu Berhasil Di Update!" << endl;
+}
+
+void tampilJumlah()
+{
+    if (totalStok == 0)
+    {
+        cout << "Stok kosong.." << endl;
+    }
+    else
+    {
+        cout << "Jumlah stok sekarang: " << totalStok << endl;
     }
 }
 
@@ -85,49 +114,69 @@ void loginAdmin()
         if (usernameInput == username && passwordInput == password)
         {
             cout << "Login Berhasil!" << endl;
-            cout<<endl;
+            cout << endl;
             sukses = true;
 
-            do{
-            cout << "==============================================" << endl;
-            cout << "|                MENU ADMIN                  |" << endl;
-            cout << "==============================================" << endl;
-            cout << "| 1.| Daftar Pemasukan Harian                |" << endl;
-            cout << "| 2.| Daftar Akun Login                      |" << endl;                             
-            cout << "| 3.| Struktur Organisasi                    |" << endl;                             
-            cout << "| 0.| Keluar                                 |" << endl;
-            cout << "==============================================" << endl;
-            cout << "Silahkan pilih menu: ";
-            cin >> pilih;
-            switch (pilih)
+            do
             {
-            case 1:
-                cout << "----------------------------------------------------------------\n";
-                tampilWaktuTransaksi();
-                cout << "                       DATA PEMBELIAN SEPATU\n";
-                cout << "\n";
-                cout << "----------------------------------------------------------------\n";
-                cout << " No.    Nama Sepatu      Tanggal Rilis     Ukuran      Harga\n";
-                cout << "----------------------------------------------------------------\n";
-                tampilkanDataPembeli();
-                cout << "----------------------------------------------------------------\n";
-                continue;
-            case 2:
-                cout << "Daftar Akun Masuk: " << endl;
-                loginUser();
-                continue;
-            case 3:
-                strukturOrganisasi();
-                bacaorganisasi();
-                continue;
-            case 0:
-                cout << "Terima Kasih Admin Baik :)" << endl;
-                break;
-            default:
-                cout << "Pilihan anda salah, silahkan coba lagi..." << endl;
-                continue;
-            }
-            } while(pilih != 0);
+                cout << "==============================================" << endl;
+                cout << "|                MENU ADMIN                  |" << endl;
+                cout << "==============================================" << endl;
+                cout << "| 1.| Daftar Pemasukan Harian                |" << endl;
+                cout << "| 2.| Daftar Akun Login                      |" << endl;
+                cout << "| 3.| Struktur Organisasi                    |" << endl;
+                cout << "| 4.| Sisa Stok                              |" << endl;
+                cout << "| 5.| Tambah Stok Sepatu                     |" << endl;
+                cout << "| 0.| Keluar                                 |" << endl;
+                cout << "==============================================" << endl;
+                cout << "Silahkan pilih menu: ";
+                cin >> pilih;
+                switch (pilih)
+                {
+                case 1:
+                    cout << "----------------------------------------------------------------\n";
+                    tampilWaktuTransaksi();
+                    cout << "                       DATA PEMBELIAN SEPATU\n";
+                    cout << "\n";
+                    cout << "----------------------------------------------------------------\n";
+                    cout << " No.    Nama Sepatu      Tanggal Rilis     Ukuran      Harga\n";
+                    cout << "----------------------------------------------------------------\n";
+                    tampilkanDataPembeli();
+                    cout << "----------------------------------------------------------------\n";
+                    continue;
+                case 2:
+                    cout << "Daftar Akun Masuk: " << endl;
+                    loginUser();
+                    continue;
+                case 3:
+                    strukturOrganisasi();
+                    bacaorganisasi();
+                    continue;
+                case 4:
+                    tampilJumlah();
+                    continue;
+                case 5:
+                    int tmbahJumlah;
+                    cout << "Masukkan jumlah stok yang ingin ditambah: ";
+                    cin >> tmbahJumlah;
+                    if (tmbahJumlah > 0)
+                    {
+                        tambahJumlahStok(tmbahJumlah);
+                    }
+                    else
+                    {
+                        cout << "Jumlah tidak valid. Tidak ada stok yang ditambah." << endl;
+                    }
+                    tampilJumlah();
+                    continue;
+                case 0:
+                    cout << "Terima Kasih Admin Baik :)" << endl;
+                    break;
+                default:
+                    cout << "Pilihan anda salah, silahkan coba lagi..." << endl;
+                    continue;
+                }
+            } while (pilih != 0);
         }
         else
         {
