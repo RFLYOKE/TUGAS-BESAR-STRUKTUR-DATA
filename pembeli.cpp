@@ -285,7 +285,6 @@ void loginPembeli()
                                 if (pertama < 1 || pertama > 8)
                                 {
                                     cout << "Pilihan tidak valid, keluar dari menu sepatu." << endl;
-                                    break;
                                 }
                                 Sepatu namaSepatu1;
                                 switch (pertama)
@@ -586,7 +585,7 @@ void loginPembeli()
                                 cout << endl;
                                 cout << "Apakah anda ingin memilih sepatu lagi? (y/t): ";
                                 cin >> yakin;
-                            } while (yakin == 'y' || yakin == 'Y');
+                            } while (yakin == 'y' || yakin == 'Y' || pertama < 1 || pertama > 8);
                             cout << "Silahkan Melakukan Pembayaran" << endl;
                             break;
                         case 2:
@@ -607,7 +606,7 @@ void loginPembeli()
                                 if (kedua < 1 || kedua > 5)
                                 {
                                     cout << "Pilihan tidak valid, keluar dari menu sepatu." << endl;
-                                    break;
+                                    // break;
                                 }
                                 Sepatu namaSepatu2;
                                 switch (kedua)
@@ -800,7 +799,7 @@ void loginPembeli()
                                 cout << endl;
                                 cout << "Apakah anda ingin memilih sepatu lagi? (y/t): ";
                                 cin >> yakin;
-                            } while (yakin == 'y' || yakin == 'Y');
+                            } while (yakin == 'y' || yakin == 'Y' || kedua < 1 || kedua > 5);
                             cout << "Silahkan Melakukan Pembayaran" << endl;
                             break;
                         case 3:
@@ -822,7 +821,7 @@ void loginPembeli()
                                 if (ketiga < 1 || ketiga > 6)
                                 {
                                     cout << "Pilihan tidak valid, keluar dari menu sepatu." << endl;
-                                    break;
+                                    // break;
                                 }
                                 Sepatu namaSepatu3;
                                 switch (ketiga)
@@ -1051,7 +1050,7 @@ void loginPembeli()
                                 cout << endl;
                                 cout << "Apakah anda ingin memilih sepatu lagi? (y/t): ";
                                 cin >> yakin;
-                            } while (yakin == 'y' || yakin == 'Y');
+                            } while (yakin == 'y' || yakin == 'Y' || ketiga < 1 || ketiga > 6);
                             cout << "Silahkan Melakukan Pembayaran" << endl;
                             break;
                         case 4:
@@ -1072,7 +1071,7 @@ void loginPembeli()
                                 if (keempat < 1 || keempat > 5)
                                 {
                                     cout << "Pilihan tidak valid, keluar dari menu sepatu." << endl;
-                                    break;
+                                    // break;
                                 }
                                 Sepatu namaSepatu4;
                                 switch (keempat)
@@ -1265,7 +1264,7 @@ void loginPembeli()
                                 cout << endl;
                                 cout << "Apakah anda ingin memilih sepatu lagi? (y/t): ";
                                 cin >> yakin;
-                            } while (yakin == 'y' || yakin == 'Y');
+                            } while (yakin == 'y' || yakin == 'Y' || keempat < 1 || keempat > 5);
                             cout << "Silahkan Melakukan Pembayaran" << endl;
                             break;
                         default:

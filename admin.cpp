@@ -68,7 +68,7 @@ struct tmbahStock
 
 tmbahStock *head = nullptr;
 
-int totalStok = 100; // Stok default mulai dari 100
+int totalStok = 100; 
 
 void tambahJumlahStok(int jumlah)
 {
@@ -76,7 +76,7 @@ void tambahJumlahStok(int jumlah)
     stokBaru->jumlah = jumlah;
     stokBaru->next = head;
     head = stokBaru;
-    totalStok += jumlah; // Tambahkan stok baru ke total stok
+    totalStok += jumlah; 
     cout << "Jumlah Sepatu Berhasil Di Update!" << endl;
 }
 
