@@ -903,7 +903,7 @@ void loginPembeli()
                                     namaSepatu3.tanggalRilis = "2024-01-05";
                                     namaSepatu3.harga = 1800000;
                                     cout << endl;
-                                    int pilUkuran3, ukuran3; // Changed variable names to avoid redeclaration
+                                    int pilUkuran3, ukuran3; 
                                     do
                                     {
                                         ukuranSepatu();
@@ -939,7 +939,7 @@ void loginPembeli()
                                     namaSepatu3.tanggalRilis = "2022-08-10";
                                     namaSepatu3.harga = 1500000;
                                     cout << endl;
-                                    int pilUkuran4, ukuran4; // Changed variable names to avoid redeclaration
+                                    int pilUkuran4, ukuran4;
                                     do
                                     {
                                         ukuranSepatu();
@@ -1011,7 +1011,7 @@ void loginPembeli()
                                     namaSepatu3.tanggalRilis = "2024-02-30";
                                     namaSepatu3.harga = 1900000;
                                     cout << endl;
-                                    int pilUkuran6, ukuran6; // Changed variable names to avoid redeclaration
+                                    int pilUkuran6, ukuran6;
                                     do
                                     {
                                         ukuranSepatu();
