@@ -3,7 +3,7 @@
 #include "listSepatu.cpp"
 using namespace std;
 
-const int maksimal = 1000;
+const int maksimal = 100;
 bool keluar = false;
 char yakin;
 int pilihan;
@@ -116,7 +116,7 @@ void tampilanPembelian()
 {
     totalHarga = 0;
 
-    ofstream fileOut("saveData.txt", ios::trunc);
+    ofstream fileOut("saveData.txt", ios::app);
     if (!fileOut)
     {
         cout << "Gagal membuka file saveData.txt" << endl;
@@ -140,6 +140,35 @@ void tampilanPembelian()
         fileOut << "Total Harga                                          " << totalHarga << endl;
     }
     fileOut.close();
+}
+
+void tampilanPembayaran(){
+    totalHarga = 0;
+
+    ofstream fileBayar("saveDataPembayaran.txt", ios::app);
+    if (!fileBayar)
+    {
+        cout << "Gagal membuka file saveData.txt" << endl;
+        return;
+    }
+
+    else if (barangBelanjaKosong())
+    {
+        cout << "Tidak Ada Barang Belanja" << endl;
+        fileBayar << "Tidak Ada Barang Belanja" << endl;
+    }
+    else
+    {
+        for (int i = 1; i <= sepatu.tempat; i++)
+        {
+            cout << i << ". " << sepatu.data[i].namaSepatu << "     " << sepatu.data[i].tanggalRilis << "     " << sepatu.data[i].ukuran << "     " << sepatu.data[i].harga << endl;
+            fileBayar << i << ". " << sepatu.data[i].namaSepatu << "     " << sepatu.data[i].tanggalRilis << "     " << sepatu.data[i].ukuran << "     " << sepatu.data[i].harga << endl;
+            totalHarga += sepatu.data[i].harga;
+        }
+        cout << "Total Harga                                          " << totalHarga << endl;
+        fileBayar << "Total Harga                                          " << totalHarga << endl;
+    }
+    fileBayar.close();
 }
 
 void ukuranSepatu()
@@ -199,10 +228,11 @@ void loginPembeli()
         cout << "Username* (no spasi): ";
         cin >> username;
         fileLogin << "Username user: " << username << endl;
+        cout << "Password* (no spasi): ";
+        cin >> password;
+        fileLogin << "Password user: " << password << endl;
     }
     fileLogin.close();
-    cout << "Password* (no spasi): ";
-    cin >> password;
     cout << endl;
     cout << "Akun Anda Berhasil Dibuat..." << endl;
     cout << endl;
@@ -1292,7 +1322,7 @@ void loginPembeli()
                     cout << "----------------------------------------------------------------\n";
                     cout << " No.    Nama Sepatu      Tanggal Rilis     Ukuran      Harga\n";
                     cout << "----------------------------------------------------------------\n";
-                    tampilanPembelian();
+                    tampilanPembayaran();
                     cout << "----------------------------------------------------------------\n";
                     cout << endl;
                     do

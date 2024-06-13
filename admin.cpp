@@ -18,7 +18,7 @@ struct organisasi
     string person;
     organisasi *right;
 };
-organisasi *root;
+organisasi *root; 
 
 void strukturOrganisasi()
 {
